@@ -1,33 +1,26 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 01/29/2019 09:37:13 PM
-// Design Name: 
-// Module Name: top_module
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+//****************************************************************//
+//  File name: top_module.v                                       //
+//                                                                //
+//  Created by       Dong Jae Shin on 2/4/2019.                   //
+//  Copyright © 2019 Dong Jae Shin. All rights reserved.          //
+//                                                                //
+//  In submitting this file for class work at CSULB               //
+//  I am confirming that this is my work and the work             //
+//  of no one else. In submitting this code I acknowledge that    //
+//  plagiarism in student project work is subject to dismissal.   // 
+//  from the class                                                //
+//****************************************************************//
 
 module top_module(clock, reset, button, switch, anode, cathode);
     input reset, button, switch, clock;
     output [7:0] anode;
     output [6:0] cathode;
     
-    wire reset_s, db_ped, ped_sr, load;
+    wire reset_s, db_ped, s, load,r, write_strobe, port_id, write;
     wire [15:0] out_port;
     reg [15:0] seg;
+    reg q1,q2; 
     
     AISO AISO(.reset(reset),        // input
               .clk(clock),          // input
@@ -43,11 +36,32 @@ module top_module(clock, reset, button, switch, anode, cathode);
     PED ped(.D_in(db_ped),          // input
             .clk(clock),            // input
             .reset(reset_s),        // input
-            .inc_p(ped_sr)          // output
-            );
-                        
-    tramelblaze tb();
+            .inc_p(s)               // output
+            );           
     
+    always @(posedge clock, reset_s) begin
+        case({s,r})
+            2'b00:{q1,q2} <= {q1,q2};
+            2'b01:{q1,q2} <= 2'b01;
+            2'b10:{q1,q2} <= 2'b10;
+            2'b11:{q1,q2} <= 2'bxx;
+        endcase
+    end // end of always
+                        
+    tramelblaze_top tb(.CLK(clock),             // input
+                       .RESET(reset_s),         // input
+                       .IN_PORT(switch),        // input
+                       .INTERRUPT(q1),          // input
+                       .OUT_PORT(out_port),     // output
+                       .PORT_ID(port_id),       // output
+                       .READ_STROBE(),          //
+                       .WRITE_STROBE(write),    //
+                       .INTERRUPT_ACK(r)        // input
+                       );
+    
+    assign load = ((port_id == 16'h0001) & write);
+    
+    // D flip flop
     always @ (posedge reset_s, clock) begin
         if(reset) seg = 0;
         else
@@ -56,7 +70,7 @@ module top_module(clock, reset, button, switch, anode, cathode);
     
     display ss(.clk(clock),         // input
                .reset(reset_s),     // input
-               .seg(),              // input
+               .seg(seg),           // input
                .a(anode),           // output
                .cathodes(cathode)   // output
                );

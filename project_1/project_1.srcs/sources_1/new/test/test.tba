@@ -1,0 +1,15 @@
+; john tramel
+; cecs 460
+; trambler assembler help
+; fixed label 20190124 - thanks sc
+
+label   EQU    0123
+
+START   LOAD   R1, label   
+        LOAD   R2, 4567
+        ADD    R1, R2
+        SUBC   R1, R2
+        JUMPNZ START
+
+ENDIT   JUMP ENDIT 
+        END
