@@ -1,0 +1,25 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/sim/tb_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/sim/scratch_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scratch_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/sim/stack_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stack_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/AISO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AISO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/PED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PED
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+WARNING: [VRFC 10-1315] redeclaration of ansi port cathodes is not allowed [C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/display.v:31]
+WARNING: [VRFC 10-1315] redeclaration of ansi port a is not allowed [C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/display.v:62]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/tramelblaze.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze
+INFO: [VRFC 10-2458] undeclared symbol ldsp, assumed default net type wire [C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/tramelblaze.v:203]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/project_1/project_1.srcs/sources_1/new/tramelblaze_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/ProjectOne_460_blaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProjectOne_460_blaze_tb

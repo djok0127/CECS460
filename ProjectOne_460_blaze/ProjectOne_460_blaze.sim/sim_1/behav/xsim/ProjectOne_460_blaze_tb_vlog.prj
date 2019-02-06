@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/sim/tb_rom.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/sim/scratch_ram.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/sim/stack_ram.v" \
+"../../../../../project_1/project_1.srcs/sources_1/new/AISO.v" \
+"../../../../../project_1/project_1.srcs/sources_1/new/PED.v" \
+"../../../../../project_1/project_1.srcs/sources_1/new/debounce.v" \
+"../../../../../project_1/project_1.srcs/sources_1/new/display.v" \
+"../../../../../project_1/project_1.srcs/sources_1/new/top_module.v" \
+"../../../../../project_1/project_1.srcs/sources_1/new/tramelblaze.v" \
+"../../../../../project_1/project_1.srcs/sources_1/new/tramelblaze_top.v" \
+"../../../../ProjectOne_460_blaze.srcs/sim_1/new/ProjectOne_460_blaze_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

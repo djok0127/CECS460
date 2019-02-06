@@ -56,12 +56,12 @@
 module tb_rom (
   a,
   clk,
-  spo
+  qspo
 );
 
 input wire [11 : 0] a;
 input wire clk;
-output wire [15 : 0] spo;
+output wire [15 : 0] qspo;
 
   dist_mem_gen_v8_0_12 #(
     .C_FAMILY("artix7"),
@@ -78,11 +78,11 @@ output wire [15 : 0] spo;
     .C_HAS_QDPO_CLK(0),
     .C_HAS_QDPO_RST(0),
     .C_HAS_QDPO_SRST(0),
-    .C_HAS_QSPO(0),
+    .C_HAS_QSPO(1),
     .C_HAS_QSPO_CE(0),
     .C_HAS_QSPO_RST(0),
     .C_HAS_QSPO_SRST(0),
-    .C_HAS_SPO(1),
+    .C_HAS_SPO(0),
     .C_HAS_WE(0),
     .C_MEM_INIT_FILE("tb_rom.mif"),
     .C_ELABORATION_DIR("./"),
@@ -110,9 +110,9 @@ output wire [15 : 0] spo;
     .qdpo_rst(1'D0),
     .qspo_srst(1'D0),
     .qdpo_srst(1'D0),
-    .spo(spo),
+    .spo(),
     .dpo(),
-    .qspo(),
+    .qspo(qspo),
     .qdpo()
   );
 endmodule

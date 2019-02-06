@@ -55,9 +55,9 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 tb_rom your_instance_name (
-  .a(a),      // input wire [11 : 0] a
-  .clk(clk),  // input wire clk
-  .spo(spo)  // output wire [15 : 0] spo
+  .a(a),        // input wire [11 : 0] a
+  .clk(clk),    // input wire clk
+  .qspo(qspo)  // output wire [15 : 0] qspo
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 
