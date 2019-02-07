@@ -27,7 +27,7 @@ module ProjectOne_460_blaze_tb;
     
     // Outputs
     
-    wire [7:0] cathodes;
+    wire [6:0] cathodes;
     wire [3:0] anode;
     
     top_module uut(.clock(clock), 

@@ -17,10 +17,9 @@ module top_module(clock, reset, button, switch, anode, cathode);
     output [7:0] anode;
     output [6:0] cathode;
     
-    wire reset_s, db_ped, s, load,r, write_strobe, port_id, write;
-    wire [15:0] out_port;
-    reg [15:0] seg;
-    reg q1,q2; 
+    wire reset_s, db_ped, s, load,r, write_strobe, write, q;
+    wire [15:0] out_port, port_id, seg;
+    
     
     AISO AISO(.reset(reset),        // input
               .clk(clock),          // input
@@ -39,19 +38,17 @@ module top_module(clock, reset, button, switch, anode, cathode);
             .inc_p(s)               // output
             );           
     
-    always @(posedge clock, reset_s) begin
-        case({s,r})
-            2'b00:{q1,q2} <= {q1,q2};
-            2'b01:{q1,q2} <= 2'b01;
-            2'b10:{q1,q2} <= 2'b10;
-            2'b11:{q1,q2} <= 2'bxx;
-        endcase
-    end // end of always
-                        
+    sr_flop interrupt(.clock(clock),            // input
+                      .reset(reset_s),          // input
+                      .s(s),                    // input
+                      .r(r),                    // input
+                      .q(q)                     // output
+                      );
+                     
     tramelblaze_top tb(.CLK(clock),             // input
                        .RESET(reset_s),         // input
                        .IN_PORT(switch),        // input
-                       .INTERRUPT(q1),          // input
+                       .INTERRUPT(q),           // input
                        .OUT_PORT(out_port),     // output
                        .PORT_ID(port_id),       // output
                        .READ_STROBE(),          //
@@ -59,14 +56,15 @@ module top_module(clock, reset, button, switch, anode, cathode);
                        .INTERRUPT_ACK(r)        // input
                        );
     
+    // comparator
     assign load = ((port_id == 16'h0001) & write);
     
-    // D flip flop
-    always @ (posedge reset_s, clock) begin
-        if(reset) seg = 0;
-        else
-            if(load)seg = out_port;
-    end // end of always
+    d_ff d1(.clock(clock),
+            .reset(reset_s),
+            .d(out_port),
+            .load(load),
+            .q(seg)
+            );            
     
     display ss(.clk(clock),         // input
                .reset(reset_s),     // input

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Feb  6 00:10:58 2019
+// Date        : Wed Feb  6 00:00:22 2019
 // Host        : DESKTOP-2ECK0P9 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top stack_ram -prefix
+//               stack_ram_ stack_ram_sim_netlist.v
 // Design      : stack_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,21 +19,21 @@ module stack_ram
     d,
     clk,
     we,
-    qspo);
+    spo);
   input [6:0]a;
   input [15:0]d;
   input clk;
   input we;
-  output [15:0]qspo;
+  output [15:0]spo;
 
   wire [6:0]a;
   wire clk;
   wire [15:0]d;
-  wire [15:0]qspo;
+  wire [15:0]spo;
   wire we;
   wire [15:0]NLW_U0_dpo_UNCONNECTED;
   wire [15:0]NLW_U0_qdpo_UNCONNECTED;
-  wire [15:0]NLW_U0_spo_UNCONNECTED;
+  wire [15:0]NLW_U0_qspo_UNCONNECTED;
 
   (* C_FAMILY = "artix7" *) 
   (* C_HAS_CLK = "1" *) 
@@ -54,11 +54,11 @@ module stack_ram
   (* c_depth = "128" *) 
   (* c_elaboration_dir = "./" *) 
   (* c_has_i_ce = "0" *) 
-  (* c_has_qspo = "1" *) 
+  (* c_has_qspo = "0" *) 
   (* c_has_qspo_ce = "0" *) 
   (* c_has_qspo_rst = "0" *) 
   (* c_has_qspo_srst = "0" *) 
-  (* c_has_spo = "0" *) 
+  (* c_has_spo = "1" *) 
   (* c_mem_init_file = "no_coe_file_loaded" *) 
   (* c_parser_type = "1" *) 
   (* c_pipeline_stages = "0" *) 
@@ -79,11 +79,11 @@ module stack_ram
         .qdpo_clk(1'b0),
         .qdpo_rst(1'b0),
         .qdpo_srst(1'b0),
-        .qspo(qspo),
+        .qspo(NLW_U0_qspo_UNCONNECTED[15:0]),
         .qspo_ce(1'b1),
         .qspo_rst(1'b0),
         .qspo_srst(1'b0),
-        .spo(NLW_U0_spo_UNCONNECTED[15:0]),
+        .spo(spo),
         .we(we));
 endmodule
 
@@ -92,12 +92,12 @@ endmodule
 (* C_HAS_D = "1" *) (* C_HAS_DPO = "0" *) (* C_HAS_DPRA = "0" *) 
 (* C_HAS_I_CE = "0" *) (* C_HAS_QDPO = "0" *) (* C_HAS_QDPO_CE = "0" *) 
 (* C_HAS_QDPO_CLK = "0" *) (* C_HAS_QDPO_RST = "0" *) (* C_HAS_QDPO_SRST = "0" *) 
-(* C_HAS_QSPO = "1" *) (* C_HAS_QSPO_CE = "0" *) (* C_HAS_QSPO_RST = "0" *) 
-(* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "0" *) (* C_HAS_WE = "1" *) 
+(* C_HAS_QSPO = "0" *) (* C_HAS_QSPO_CE = "0" *) (* C_HAS_QSPO_RST = "0" *) 
+(* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "1" *) (* C_HAS_WE = "1" *) 
 (* C_MEM_INIT_FILE = "no_coe_file_loaded" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "0" *) (* C_REG_A_D_INPUTS = "1" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_12" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) 
 module stack_ram_dist_mem_gen_v8_0_12
    (a,
     d,
@@ -138,7 +138,7 @@ module stack_ram_dist_mem_gen_v8_0_12
   wire [6:0]a;
   wire clk;
   wire [15:0]d;
-  wire [15:0]qspo;
+  wire [15:0]spo;
   wire we;
 
   assign dpo[15] = \<const0> ;
@@ -173,40 +173,39 @@ module stack_ram_dist_mem_gen_v8_0_12
   assign qdpo[2] = \<const0> ;
   assign qdpo[1] = \<const0> ;
   assign qdpo[0] = \<const0> ;
-  assign spo[15] = \<const0> ;
-  assign spo[14] = \<const0> ;
-  assign spo[13] = \<const0> ;
-  assign spo[12] = \<const0> ;
-  assign spo[11] = \<const0> ;
-  assign spo[10] = \<const0> ;
-  assign spo[9] = \<const0> ;
-  assign spo[8] = \<const0> ;
-  assign spo[7] = \<const0> ;
-  assign spo[6] = \<const0> ;
-  assign spo[5] = \<const0> ;
-  assign spo[4] = \<const0> ;
-  assign spo[3] = \<const0> ;
-  assign spo[2] = \<const0> ;
-  assign spo[1] = \<const0> ;
-  assign spo[0] = \<const0> ;
+  assign qspo[15] = \<const0> ;
+  assign qspo[14] = \<const0> ;
+  assign qspo[13] = \<const0> ;
+  assign qspo[12] = \<const0> ;
+  assign qspo[11] = \<const0> ;
+  assign qspo[10] = \<const0> ;
+  assign qspo[9] = \<const0> ;
+  assign qspo[8] = \<const0> ;
+  assign qspo[7] = \<const0> ;
+  assign qspo[6] = \<const0> ;
+  assign qspo[5] = \<const0> ;
+  assign qspo[4] = \<const0> ;
+  assign qspo[3] = \<const0> ;
+  assign qspo[2] = \<const0> ;
+  assign qspo[1] = \<const0> ;
+  assign qspo[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
   stack_ram_dist_mem_gen_v8_0_12_synth \synth_options.dist_mem_inst 
        (.a(a),
         .clk(clk),
         .d(d),
-        .qspo(qspo),
+        .spo(spo),
         .we(we));
 endmodule
 
-(* ORIG_REF_NAME = "dist_mem_gen_v8_0_12_synth" *) 
 module stack_ram_dist_mem_gen_v8_0_12_synth
-   (qspo,
+   (spo,
     a,
     clk,
     we,
     d);
-  output [15:0]qspo;
+  output [15:0]spo;
   input [6:0]a;
   input clk;
   input we;
@@ -215,25 +214,24 @@ module stack_ram_dist_mem_gen_v8_0_12_synth
   wire [6:0]a;
   wire clk;
   wire [15:0]d;
-  wire [15:0]qspo;
+  wire [15:0]spo;
   wire we;
 
   stack_ram_spram \gen_sp_ram.spram_inst 
        (.a(a),
         .clk(clk),
         .d(d),
-        .qspo(qspo),
+        .spo(spo),
         .we(we));
 endmodule
 
-(* ORIG_REF_NAME = "spram" *) 
 module stack_ram_spram
-   (qspo,
+   (spo,
     a,
     clk,
     we,
     d);
-  output [15:0]qspo;
+  output [15:0]spo;
   input [6:0]a;
   input clk;
   input we;
@@ -244,12 +242,11 @@ module stack_ram_spram
   wire clk;
   wire [15:0]d;
   wire [15:0]d_reg;
-  wire [15:0]qspo_input;
   (* RTL_KEEP = "true" *) wire [15:0]qspo_int;
+  wire [15:0]spo;
   wire we;
   wire we_reg;
 
-  assign qspo[15:0] = qspo_int;
   FDRE #(
     .INIT(1'b0)) 
     \a_reg_reg[0] 
@@ -409,7 +406,7 @@ module stack_ram_spram
     \qspo_int_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[0]),
+        .D(spo[0]),
         .Q(qspo_int[0]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -419,7 +416,7 @@ module stack_ram_spram
     \qspo_int_reg[10] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[10]),
+        .D(spo[10]),
         .Q(qspo_int[10]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -429,7 +426,7 @@ module stack_ram_spram
     \qspo_int_reg[11] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[11]),
+        .D(spo[11]),
         .Q(qspo_int[11]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -439,7 +436,7 @@ module stack_ram_spram
     \qspo_int_reg[12] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[12]),
+        .D(spo[12]),
         .Q(qspo_int[12]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -449,7 +446,7 @@ module stack_ram_spram
     \qspo_int_reg[13] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[13]),
+        .D(spo[13]),
         .Q(qspo_int[13]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -459,7 +456,7 @@ module stack_ram_spram
     \qspo_int_reg[14] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[14]),
+        .D(spo[14]),
         .Q(qspo_int[14]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -469,7 +466,7 @@ module stack_ram_spram
     \qspo_int_reg[15] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[15]),
+        .D(spo[15]),
         .Q(qspo_int[15]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -479,7 +476,7 @@ module stack_ram_spram
     \qspo_int_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[1]),
+        .D(spo[1]),
         .Q(qspo_int[1]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -489,7 +486,7 @@ module stack_ram_spram
     \qspo_int_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[2]),
+        .D(spo[2]),
         .Q(qspo_int[2]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -499,7 +496,7 @@ module stack_ram_spram
     \qspo_int_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[3]),
+        .D(spo[3]),
         .Q(qspo_int[3]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -509,7 +506,7 @@ module stack_ram_spram
     \qspo_int_reg[4] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[4]),
+        .D(spo[4]),
         .Q(qspo_int[4]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -519,7 +516,7 @@ module stack_ram_spram
     \qspo_int_reg[5] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[5]),
+        .D(spo[5]),
         .Q(qspo_int[5]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -529,7 +526,7 @@ module stack_ram_spram
     \qspo_int_reg[6] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[6]),
+        .D(spo[6]),
         .Q(qspo_int[6]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -539,7 +536,7 @@ module stack_ram_spram
     \qspo_int_reg[7] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[7]),
+        .D(spo[7]),
         .Q(qspo_int[7]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -549,7 +546,7 @@ module stack_ram_spram
     \qspo_int_reg[8] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[8]),
+        .D(spo[8]),
         .Q(qspo_int[8]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -559,7 +556,7 @@ module stack_ram_spram
     \qspo_int_reg[9] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[9]),
+        .D(spo[9]),
         .Q(qspo_int[9]),
         .R(1'b0));
   RAM128X1S #(
@@ -573,7 +570,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[0]),
-        .O(qspo_input[0]),
+        .O(spo[0]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -587,7 +584,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[10]),
-        .O(qspo_input[10]),
+        .O(spo[10]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -601,7 +598,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[11]),
-        .O(qspo_input[11]),
+        .O(spo[11]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -615,7 +612,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[12]),
-        .O(qspo_input[12]),
+        .O(spo[12]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -629,7 +626,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[13]),
-        .O(qspo_input[13]),
+        .O(spo[13]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -643,7 +640,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[14]),
-        .O(qspo_input[14]),
+        .O(spo[14]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -657,7 +654,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[15]),
-        .O(qspo_input[15]),
+        .O(spo[15]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -671,7 +668,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[1]),
-        .O(qspo_input[1]),
+        .O(spo[1]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -685,7 +682,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[2]),
-        .O(qspo_input[2]),
+        .O(spo[2]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -699,7 +696,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[3]),
-        .O(qspo_input[3]),
+        .O(spo[3]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -713,7 +710,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[4]),
-        .O(qspo_input[4]),
+        .O(spo[4]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -727,7 +724,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[5]),
-        .O(qspo_input[5]),
+        .O(spo[5]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -741,7 +738,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[6]),
-        .O(qspo_input[6]),
+        .O(spo[6]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -755,7 +752,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[7]),
-        .O(qspo_input[7]),
+        .O(spo[7]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -769,7 +766,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[8]),
-        .O(qspo_input[8]),
+        .O(spo[8]),
         .WCLK(clk),
         .WE(we_reg));
   RAM128X1S #(
@@ -783,7 +780,7 @@ module stack_ram_spram
         .A5(a_reg[5]),
         .A6(a_reg[6]),
         .D(d_reg[9]),
-        .O(qspo_input[9]),
+        .O(spo[9]),
         .WCLK(clk),
         .WE(we_reg));
   FDRE we_reg_reg

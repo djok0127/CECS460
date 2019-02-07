@@ -62,7 +62,7 @@ ENTITY scratch_ram IS
     d : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     clk : IN STD_LOGIC;
     we : IN STD_LOGIC;
-    qspo : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    spo : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END scratch_ram;
 
@@ -129,7 +129,7 @@ ARCHITECTURE scratch_ram_arch OF scratch_ram IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF scratch_ram_arch : ARCHITECTURE IS "scratch_ram,dist_mem_gen_v8_0_12,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF scratch_ram_arch: ARCHITECTURE IS "scratch_ram,dist_mem_gen_v8_0_12,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=dist_mem_gen,x_ipVersion=8.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_ADDR_WIDTH=9,C_DEFAULT_DATA=0,C_DEPTH=512,C_HAS_CLK=1,C_HAS_D=1,C_HAS_DPO=0,C_HAS_DPRA=0,C_HAS_I_CE=0,C_HAS_QDPO=0,C_HAS_QDPO_CE=0,C_HAS_QDPO_CLK=0,C_HAS_QDPO_RST=0,C_HAS_QDPO_SRST=0,C_HAS_QSPO=1,C_HAS_QSPO_CE=0,C_HAS_QSPO_RST=0,C_HAS_QSPO_SRST=0,C_HAS_SPO=0,C_HAS_WE=1,C_MEM_INIT_FIL" & 
+  ATTRIBUTE CORE_GENERATION_INFO OF scratch_ram_arch: ARCHITECTURE IS "scratch_ram,dist_mem_gen_v8_0_12,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=dist_mem_gen,x_ipVersion=8.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_ADDR_WIDTH=9,C_DEFAULT_DATA=0,C_DEPTH=512,C_HAS_CLK=1,C_HAS_D=1,C_HAS_DPO=0,C_HAS_DPRA=0,C_HAS_I_CE=0,C_HAS_QDPO=0,C_HAS_QDPO_CE=0,C_HAS_QDPO_CLK=0,C_HAS_QDPO_RST=0,C_HAS_QDPO_SRST=0,C_HAS_QSPO=0,C_HAS_QSPO_CE=0,C_HAS_QSPO_RST=0,C_HAS_QSPO_SRST=0,C_HAS_SPO=1,C_HAS_WE=1,C_MEM_INIT_FIL" & 
 "E=no_coe_file_loaded,C_ELABORATION_DIR=./,C_MEM_TYPE=1,C_PIPELINE_STAGES=0,C_QCE_JOINED=0,C_QUALIFY_WE=0,C_READ_MIF=0,C_REG_A_D_INPUTS=1,C_REG_DPRA_INPUT=0,C_SYNC_ENABLE=1,C_WIDTH=16,C_PARSER_TYPE=1}";
 BEGIN
   U0 : dist_mem_gen_v8_0_12
@@ -148,11 +148,11 @@ BEGIN
       C_HAS_QDPO_CLK => 0,
       C_HAS_QDPO_RST => 0,
       C_HAS_QDPO_SRST => 0,
-      C_HAS_QSPO => 1,
+      C_HAS_QSPO => 0,
       C_HAS_QSPO_CE => 0,
       C_HAS_QSPO_RST => 0,
       C_HAS_QSPO_SRST => 0,
-      C_HAS_SPO => 0,
+      C_HAS_SPO => 1,
       C_HAS_WE => 1,
       C_MEM_INIT_FILE => "no_coe_file_loaded",
       C_ELABORATION_DIR => "./",
@@ -181,6 +181,6 @@ BEGIN
       qdpo_rst => '0',
       qspo_srst => '0',
       qdpo_srst => '0',
-      qspo => qspo
+      spo => spo
     );
 END scratch_ram_arch;

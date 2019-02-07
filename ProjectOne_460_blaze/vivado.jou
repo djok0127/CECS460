@@ -1,0 +1,297 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Feb  6 09:48:16 2019
+# Process ID: 16896
+# Current directory: C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14012 C:\Users\Chris\Desktop\Github\cecs460\ProjectOne_460_blaze\ProjectOne_460_blaze.xpr
+# Log file: C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/vivado.log
+# Journal file: C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.xpr
+update_compile_order -fileset sources_1
+generate_target Simulation [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci]
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci] -directory C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+set_property -dict [list CONFIG.input_options {non_registered} CONFIG.output_options {non_registered}] [get_ips tb_rom]
+generate_target all [get_files  C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci]
+catch { config_ip_cache -export [get_ips -all tb_rom] }
+catch { [ delete_ip_run [get_ips -all tb_rom] ] }
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci]
+export_simulation -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci] -directory C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.input_options {non_registered} CONFIG.output_options {non_registered}] [get_ips stack_ram]
+generate_target all [get_files  C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci]
+catch { config_ip_cache -export [get_ips -all stack_ram] }
+catch { [ delete_ip_run [get_ips -all stack_ram] ] }
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci]
+export_simulation -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci] -directory C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.input_options {non_registered} CONFIG.output_options {non_registered}] [get_ips scratch_ram]
+generate_target all [get_files  C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci]
+catch { config_ip_cache -export [get_ips -all scratch_ram] }
+catch { [ delete_ip_run [get_ips -all scratch_ram] ] }
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci]
+export_simulation -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci] -directory C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+launch_simulation
+set_property -dict [list CONFIG.input_options {registered}] [get_ips tb_rom]
+generate_target all [get_files  C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci]
+catch { config_ip_cache -export [get_ips -all tb_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci]
+export_simulation -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci] -directory C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.output_options {non_registered}] [get_ips tb_rom]
+launch_simulation
+source ProjectOne_460_blaze_tb.tcl
+close_sim
+launch_simulation
+source ProjectOne_460_blaze_tb.tcl
+close_sim
+launch_simulation
+source ProjectOne_460_blaze_tb.tcl
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/tramelblaze_tb.v w ]
+add_files -fileset sim_1 C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/tramelblaze_tb.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tramelblaze_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tramelblaze_top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_1]
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close [ open C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/sr_flop.v w ]
+add_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/sr_flop.v
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close [ open C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/d_ff.v w ]
+add_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/d_ff.v
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+launch_simulation
+source tramelblaze_top_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {50000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tramelblaze_top_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top ProjectOne_460_blaze_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source ProjectOne_460_blaze_tb.tcl
+close_sim
+close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+launch_simulation
+source ProjectOne_460_blaze_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tramelblaze_top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+close_sim
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+set_property -dict [list CONFIG.coefficient_file {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze/tramelblaze.coe}] [get_ips tb_rom]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+set_property -dict [list CONFIG.coefficient_file {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze/tramelblaze.coe}] [get_ips tb_rom]
+generate_target all [get_files  C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci]
+catch { config_ip_cache -export [get_ips -all tb_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci]
+launch_runs -jobs 2 tb_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom.xci] -directory C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+launch_simulation
+source tramelblaze_top_tb.tcl
+close_sim
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+set_property -dict [list CONFIG.input_options {registered}] [get_ips stack_ram]
+generate_target all [get_files  C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci]
+catch { config_ip_cache -export [get_ips -all stack_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci]
+export_simulation -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci] -directory C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.input_options {registered}] [get_ips scratch_ram]
+generate_target all [get_files  C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci]
+catch { config_ip_cache -export [get_ips -all scratch_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci]
+export_simulation -of_objects [get_files C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci] -directory C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tramelblaze_top_tb.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/impl_1/top_module.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+close_sim

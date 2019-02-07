@@ -70,9 +70,9 @@ tramelblaze tramelblaze
                 
 tb_rom your_instance_name 
       (
-      .clka(CLK),                   // input clka
-      .addra(ADDRESS),              // input [11 : 0] addra
-      .douta(INSTRUCTION)           // output [15 : 0] douta
+      .clk(CLK),                   // input clka
+      .a(ADDRESS),              // input [11 : 0] addra
+      .spo(INSTRUCTION)           // output [15 : 0] douta
       );
 
 endmodule

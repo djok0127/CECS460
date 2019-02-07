@@ -214,11 +214,11 @@ assign stackAdrs   = pushQ ? stackPointQ      : stackPointQ - 7'b1;
 assign stackPointD = pushQ ? stackAdrs + 7'b1 : stackAdrs;
 
 stack_ram stkr (
-        .addra(stackAdrs),
-        .dina(stackWdata),
-        .wea(pushQ),
-        .clka(CLK),
-        .douta(stackRdata)
+        .a(stackAdrs),
+        .d(stackWdata),
+        .we(pushQ),
+        .clk(CLK),
+        .spo(stackRdata)
         );
    
 //////////////////////////////
@@ -368,11 +368,11 @@ assign scratch_din = alu_a;
 assign scratch_adrs = alu_b[8:0];
  
 scratch_ram sr (
-   .clka(CLK),
-   .wea(wtsrQ),
-   .addra(scratch_adrs),
-   .dina(scratch_din),
-   .douta(scratch_dout)
+   .clk(CLK),
+   .we(wtsrQ),
+   .a(scratch_adrs),
+   .d(scratch_din),
+   .spo(scratch_dout)
    );
 
 ///////////////////////////////

@@ -56,7 +56,7 @@ COMPONENT tb_rom
   PORT (
     a : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     clk : IN STD_LOGIC;
-    qspo : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    spo : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -69,7 +69,7 @@ your_instance_name : tb_rom
   PORT MAP (
     a => a,
     clk => clk,
-    qspo => qspo
+    spo => spo
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

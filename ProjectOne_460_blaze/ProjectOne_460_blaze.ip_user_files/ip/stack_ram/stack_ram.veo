@@ -55,11 +55,11 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 stack_ram your_instance_name (
-  .a(a),        // input wire [6 : 0] a
-  .d(d),        // input wire [15 : 0] d
-  .clk(clk),    // input wire clk
-  .we(we),      // input wire we
-  .qspo(qspo)  // output wire [15 : 0] qspo
+  .a(a),      // input wire [6 : 0] a
+  .d(d),      // input wire [15 : 0] d
+  .clk(clk),  // input wire clk
+  .we(we),    // input wire we
+  .spo(spo)  // output wire [15 : 0] spo
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

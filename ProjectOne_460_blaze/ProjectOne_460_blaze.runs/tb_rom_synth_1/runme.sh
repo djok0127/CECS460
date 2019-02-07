@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/tb_rom_synth_1'
+HD_PWD='C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.runs/tb_rom_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Feb  6 00:11:18 2019
+-- Date        : Wed Feb  6 00:00:55 2019
 -- Host        : DESKTOP-2ECK0P9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top scratch_ram -prefix
+--               scratch_ram_ scratch_ram_sim_netlist.vhdl
 -- Design      : scratch_ram
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,20 +16,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity scratch_ram_spram is
   port (
-    qspo : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    spo : out STD_LOGIC_VECTOR ( 15 downto 0 );
     a : in STD_LOGIC_VECTOR ( 8 downto 0 );
     clk : in STD_LOGIC;
     we : in STD_LOGIC;
     d : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scratch_ram_spram : entity is "spram";
 end scratch_ram_spram;
 
 architecture STRUCTURE of scratch_ram_spram is
   signal a_reg : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal d_reg : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal qspo_input : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal qspo_int : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of qspo_int : signal is "true";
@@ -67,24 +64,8 @@ architecture STRUCTURE of scratch_ram_spram is
   signal ram_reg_256_511_7_7_n_0 : STD_LOGIC;
   signal ram_reg_256_511_8_8_n_0 : STD_LOGIC;
   signal ram_reg_256_511_9_9_n_0 : STD_LOGIC;
+  signal \^spo\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal we_reg : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \qspo_int[0]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \qspo_int[10]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \qspo_int[11]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \qspo_int[12]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \qspo_int[13]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \qspo_int[14]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \qspo_int[15]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \qspo_int[1]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \qspo_int[2]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \qspo_int[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \qspo_int[4]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \qspo_int[5]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \qspo_int[6]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \qspo_int[7]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \qspo_int[8]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \qspo_int[9]_i_1\ : label is "soft_lutpair4";
   attribute KEEP : string;
   attribute KEEP of \qspo_int_reg[0]\ : label is "yes";
   attribute equivalent_register_removal : string;
@@ -152,8 +133,25 @@ architecture STRUCTURE of scratch_ram_spram is
   attribute METHODOLOGY_DRC_VIOS of ram_reg_256_511_7_7 : label is "{SYNTH-5 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of ram_reg_256_511_8_8 : label is "{SYNTH-5 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of ram_reg_256_511_9_9 : label is "{SYNTH-5 {cell *THIS*}}";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \spo[0]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \spo[10]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \spo[11]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \spo[12]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \spo[13]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \spo[14]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \spo[15]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \spo[1]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \spo[2]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \spo[3]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \spo[4]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \spo[5]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \spo[6]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \spo[7]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \spo[8]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \spo[9]_INST_0\ : label is "soft_lutpair4";
 begin
-  qspo(15 downto 0) <= qspo_int(15 downto 0);
+  spo(15 downto 0) <= \^spo\(15 downto 0);
 \a_reg_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -381,166 +379,6 @@ begin
       Q => d_reg(9),
       R => '0'
     );
-\qspo_int[0]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_0_0_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_0_0_n_0,
-      O => qspo_input(0)
-    );
-\qspo_int[10]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_10_10_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_10_10_n_0,
-      O => qspo_input(10)
-    );
-\qspo_int[11]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_11_11_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_11_11_n_0,
-      O => qspo_input(11)
-    );
-\qspo_int[12]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_12_12_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_12_12_n_0,
-      O => qspo_input(12)
-    );
-\qspo_int[13]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_13_13_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_13_13_n_0,
-      O => qspo_input(13)
-    );
-\qspo_int[14]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_14_14_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_14_14_n_0,
-      O => qspo_input(14)
-    );
-\qspo_int[15]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_15_15_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_15_15_n_0,
-      O => qspo_input(15)
-    );
-\qspo_int[1]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_1_1_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_1_1_n_0,
-      O => qspo_input(1)
-    );
-\qspo_int[2]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_2_2_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_2_2_n_0,
-      O => qspo_input(2)
-    );
-\qspo_int[3]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_3_3_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_3_3_n_0,
-      O => qspo_input(3)
-    );
-\qspo_int[4]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_4_4_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_4_4_n_0,
-      O => qspo_input(4)
-    );
-\qspo_int[5]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_5_5_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_5_5_n_0,
-      O => qspo_input(5)
-    );
-\qspo_int[6]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_6_6_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_6_6_n_0,
-      O => qspo_input(6)
-    );
-\qspo_int[7]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_7_7_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_7_7_n_0,
-      O => qspo_input(7)
-    );
-\qspo_int[8]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_8_8_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_8_8_n_0,
-      O => qspo_input(8)
-    );
-\qspo_int[9]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => ram_reg_256_511_9_9_n_0,
-      I1 => a_reg(8),
-      I2 => ram_reg_0_255_9_9_n_0,
-      O => qspo_input(9)
-    );
 \qspo_int_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -548,7 +386,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(0),
+      D => \^spo\(0),
       Q => qspo_int(0),
       R => '0'
     );
@@ -559,7 +397,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(10),
+      D => \^spo\(10),
       Q => qspo_int(10),
       R => '0'
     );
@@ -570,7 +408,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(11),
+      D => \^spo\(11),
       Q => qspo_int(11),
       R => '0'
     );
@@ -581,7 +419,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(12),
+      D => \^spo\(12),
       Q => qspo_int(12),
       R => '0'
     );
@@ -592,7 +430,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(13),
+      D => \^spo\(13),
       Q => qspo_int(13),
       R => '0'
     );
@@ -603,7 +441,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(14),
+      D => \^spo\(14),
       Q => qspo_int(14),
       R => '0'
     );
@@ -614,7 +452,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(15),
+      D => \^spo\(15),
       Q => qspo_int(15),
       R => '0'
     );
@@ -625,7 +463,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(1),
+      D => \^spo\(1),
       Q => qspo_int(1),
       R => '0'
     );
@@ -636,7 +474,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(2),
+      D => \^spo\(2),
       Q => qspo_int(2),
       R => '0'
     );
@@ -647,7 +485,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(3),
+      D => \^spo\(3),
       Q => qspo_int(3),
       R => '0'
     );
@@ -658,7 +496,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(4),
+      D => \^spo\(4),
       Q => qspo_int(4),
       R => '0'
     );
@@ -669,7 +507,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(5),
+      D => \^spo\(5),
       Q => qspo_int(5),
       R => '0'
     );
@@ -680,7 +518,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(6),
+      D => \^spo\(6),
       Q => qspo_int(6),
       R => '0'
     );
@@ -691,7 +529,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(7),
+      D => \^spo\(7),
       Q => qspo_int(7),
       R => '0'
     );
@@ -702,7 +540,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(8),
+      D => \^spo\(8),
       Q => qspo_int(8),
       R => '0'
     );
@@ -713,7 +551,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(9),
+      D => \^spo\(9),
       Q => qspo_int(9),
       R => '0'
     );
@@ -1087,6 +925,166 @@ ram_reg_256_511_9_9: unisim.vcomponents.RAM256X1S
       WCLK => clk,
       WE => ram_reg_256_511_0_0_i_1_n_0
     );
+\spo[0]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_0_0_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_0_0_n_0,
+      O => \^spo\(0)
+    );
+\spo[10]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_10_10_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_10_10_n_0,
+      O => \^spo\(10)
+    );
+\spo[11]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_11_11_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_11_11_n_0,
+      O => \^spo\(11)
+    );
+\spo[12]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_12_12_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_12_12_n_0,
+      O => \^spo\(12)
+    );
+\spo[13]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_13_13_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_13_13_n_0,
+      O => \^spo\(13)
+    );
+\spo[14]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_14_14_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_14_14_n_0,
+      O => \^spo\(14)
+    );
+\spo[15]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_15_15_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_15_15_n_0,
+      O => \^spo\(15)
+    );
+\spo[1]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_1_1_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_1_1_n_0,
+      O => \^spo\(1)
+    );
+\spo[2]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_2_2_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_2_2_n_0,
+      O => \^spo\(2)
+    );
+\spo[3]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_3_3_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_3_3_n_0,
+      O => \^spo\(3)
+    );
+\spo[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_4_4_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_4_4_n_0,
+      O => \^spo\(4)
+    );
+\spo[5]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_5_5_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_5_5_n_0,
+      O => \^spo\(5)
+    );
+\spo[6]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_6_6_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_6_6_n_0,
+      O => \^spo\(6)
+    );
+\spo[7]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_7_7_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_7_7_n_0,
+      O => \^spo\(7)
+    );
+\spo[8]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_8_8_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_8_8_n_0,
+      O => \^spo\(8)
+    );
+\spo[9]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => ram_reg_256_511_9_9_n_0,
+      I1 => a_reg(8),
+      I2 => ram_reg_0_255_9_9_n_0,
+      O => \^spo\(9)
+    );
 we_reg_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
@@ -1102,14 +1100,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity scratch_ram_dist_mem_gen_v8_0_12_synth is
   port (
-    qspo : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    spo : out STD_LOGIC_VECTOR ( 15 downto 0 );
     a : in STD_LOGIC_VECTOR ( 8 downto 0 );
     clk : in STD_LOGIC;
     we : in STD_LOGIC;
     d : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scratch_ram_dist_mem_gen_v8_0_12_synth : entity is "dist_mem_gen_v8_0_12_synth";
 end scratch_ram_dist_mem_gen_v8_0_12_synth;
 
 architecture STRUCTURE of scratch_ram_dist_mem_gen_v8_0_12_synth is
@@ -1119,7 +1115,7 @@ begin
       a(8 downto 0) => a(8 downto 0),
       clk => clk,
       d(15 downto 0) => d(15 downto 0),
-      qspo(15 downto 0) => qspo(15 downto 0),
+      spo(15 downto 0) => spo(15 downto 0),
       we => we
     );
 end STRUCTURE;
@@ -1178,7 +1174,7 @@ entity scratch_ram_dist_mem_gen_v8_0_12 is
   attribute C_HAS_QDPO_SRST : integer;
   attribute C_HAS_QDPO_SRST of scratch_ram_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_HAS_QSPO : integer;
-  attribute C_HAS_QSPO of scratch_ram_dist_mem_gen_v8_0_12 : entity is 1;
+  attribute C_HAS_QSPO of scratch_ram_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_HAS_QSPO_CE : integer;
   attribute C_HAS_QSPO_CE of scratch_ram_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_HAS_QSPO_RST : integer;
@@ -1186,7 +1182,7 @@ entity scratch_ram_dist_mem_gen_v8_0_12 is
   attribute C_HAS_QSPO_SRST : integer;
   attribute C_HAS_QSPO_SRST of scratch_ram_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_HAS_SPO : integer;
-  attribute C_HAS_SPO of scratch_ram_dist_mem_gen_v8_0_12 : entity is 0;
+  attribute C_HAS_SPO of scratch_ram_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_HAS_WE : integer;
   attribute C_HAS_WE of scratch_ram_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_MEM_INIT_FILE : string;
@@ -1211,8 +1207,6 @@ entity scratch_ram_dist_mem_gen_v8_0_12 is
   attribute C_SYNC_ENABLE of scratch_ram_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of scratch_ram_dist_mem_gen_v8_0_12 : entity is 16;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of scratch_ram_dist_mem_gen_v8_0_12 : entity is "dist_mem_gen_v8_0_12";
 end scratch_ram_dist_mem_gen_v8_0_12;
 
 architecture STRUCTURE of scratch_ram_dist_mem_gen_v8_0_12 is
@@ -1250,22 +1244,22 @@ begin
   qdpo(2) <= \<const0>\;
   qdpo(1) <= \<const0>\;
   qdpo(0) <= \<const0>\;
-  spo(15) <= \<const0>\;
-  spo(14) <= \<const0>\;
-  spo(13) <= \<const0>\;
-  spo(12) <= \<const0>\;
-  spo(11) <= \<const0>\;
-  spo(10) <= \<const0>\;
-  spo(9) <= \<const0>\;
-  spo(8) <= \<const0>\;
-  spo(7) <= \<const0>\;
-  spo(6) <= \<const0>\;
-  spo(5) <= \<const0>\;
-  spo(4) <= \<const0>\;
-  spo(3) <= \<const0>\;
-  spo(2) <= \<const0>\;
-  spo(1) <= \<const0>\;
-  spo(0) <= \<const0>\;
+  qspo(15) <= \<const0>\;
+  qspo(14) <= \<const0>\;
+  qspo(13) <= \<const0>\;
+  qspo(12) <= \<const0>\;
+  qspo(11) <= \<const0>\;
+  qspo(10) <= \<const0>\;
+  qspo(9) <= \<const0>\;
+  qspo(8) <= \<const0>\;
+  qspo(7) <= \<const0>\;
+  qspo(6) <= \<const0>\;
+  qspo(5) <= \<const0>\;
+  qspo(4) <= \<const0>\;
+  qspo(3) <= \<const0>\;
+  qspo(2) <= \<const0>\;
+  qspo(1) <= \<const0>\;
+  qspo(0) <= \<const0>\;
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
@@ -1275,7 +1269,7 @@ GND: unisim.vcomponents.GND
       a(8 downto 0) => a(8 downto 0),
       clk => clk,
       d(15 downto 0) => d(15 downto 0),
-      qspo(15 downto 0) => qspo(15 downto 0),
+      spo(15 downto 0) => spo(15 downto 0),
       we => we
     );
 end STRUCTURE;
@@ -1289,7 +1283,7 @@ entity scratch_ram is
     d : in STD_LOGIC_VECTOR ( 15 downto 0 );
     clk : in STD_LOGIC;
     we : in STD_LOGIC;
-    qspo : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    spo : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of scratch_ram : entity is true;
@@ -1304,7 +1298,7 @@ end scratch_ram;
 architecture STRUCTURE of scratch_ram is
   signal NLW_U0_dpo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_U0_qdpo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_spo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal NLW_U0_qspo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "artix7";
   attribute C_HAS_CLK : integer;
@@ -1344,7 +1338,7 @@ architecture STRUCTURE of scratch_ram is
   attribute c_has_i_ce : integer;
   attribute c_has_i_ce of U0 : label is 0;
   attribute c_has_qspo : integer;
-  attribute c_has_qspo of U0 : label is 1;
+  attribute c_has_qspo of U0 : label is 0;
   attribute c_has_qspo_ce : integer;
   attribute c_has_qspo_ce of U0 : label is 0;
   attribute c_has_qspo_rst : integer;
@@ -1352,7 +1346,7 @@ architecture STRUCTURE of scratch_ram is
   attribute c_has_qspo_srst : integer;
   attribute c_has_qspo_srst of U0 : label is 0;
   attribute c_has_spo : integer;
-  attribute c_has_spo of U0 : label is 0;
+  attribute c_has_spo of U0 : label is 1;
   attribute c_mem_init_file : string;
   attribute c_mem_init_file of U0 : label is "no_coe_file_loaded";
   attribute c_parser_type : integer;
@@ -1383,11 +1377,11 @@ U0: entity work.scratch_ram_dist_mem_gen_v8_0_12
       qdpo_clk => '0',
       qdpo_rst => '0',
       qdpo_srst => '0',
-      qspo(15 downto 0) => qspo(15 downto 0),
+      qspo(15 downto 0) => NLW_U0_qspo_UNCONNECTED(15 downto 0),
       qspo_ce => '1',
       qspo_rst => '0',
       qspo_srst => '0',
-      spo(15 downto 0) => NLW_U0_spo_UNCONNECTED(15 downto 0),
+      spo(15 downto 0) => spo(15 downto 0),
       we => we
     );
 end STRUCTURE;

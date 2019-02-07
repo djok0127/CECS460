@@ -1,0 +1,105 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Feb  6 15:20:36 2019
+| Host         : DESKTOP-M1KD6LV running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
+| Design       : top_module
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    37 |
+| Unused register locations in slices containing registers |    78 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|     10 |            5 |
+|     12 |            3 |
+|     14 |            1 |
+|    16+ |           27 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             124 |           20 |
+| No           | No                    | Yes                    |             216 |           54 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             638 |          135 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+----------------------------------------------------------------------------------------------------+---------------------------+------------------+----------------+
+|   Clock Signal   |                                            Enable Signal                                           |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++------------------+----------------------------------------------------------------------------------------------------+---------------------------+------------------+----------------+
+|  clock_IBUF_BUFG |                                                                                                    | reset_IBUF                |                1 |              4 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[5][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][0] |                4 |             10 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[4][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][0] |                2 |             10 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[12][15]_i_1_n_0                                                             | AISO/inst_reg_reg[5][0]   |                1 |             10 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[13][15]_i_1_n_0                                                             | AISO/inst_reg_reg[5][0]   |                4 |             10 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[6][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][0] |                2 |             10 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[15][15]_i_1_n_0                                                             | AISO/inst_reg_reg[5][0]   |                3 |             12 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[14][15]_i_1_n_0                                                             | AISO/inst_reg_reg[5][0]   |                3 |             12 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[7][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][0] |                1 |             12 |
+|  clock_IBUF_BUFG | tb/tramelblaze/ldsp                                                                                | AISO/AR[0]                |                3 |             14 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[15][15]_i_1_n_0                                                             | AISO/regfile_reg[6][5][0] |                4 |             20 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[14][15]_i_1_n_0                                                             | AISO/regfile_reg[6][5][0] |                4 |             20 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[7][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][1] |                4 |             20 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[12][15]_i_1_n_0                                                             | AISO/regfile_reg[6][5][0] |                5 |             22 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[6][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][1] |                4 |             22 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[5][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][1] |                3 |             22 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[4][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][1] |                5 |             22 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[13][15]_i_1_n_0                                                             | AISO/regfile_reg[6][5][0] |                5 |             22 |
+|  clock_IBUF_BUFG | tb/tramelblaze/ldirQ                                                                               | AISO/inst_reg_reg[5][0]   |                4 |             24 |
+|  clock_IBUF_BUFG | tb/tramelblaze/loadKQ                                                                              | AISO/inst_reg_reg[5][0]   |                4 |             24 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[2][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][1] |                8 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[3][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][1] |                5 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[0][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][1] |                8 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/ldpcQ                                                                               | AISO/inst_reg_reg[5][0]   |                5 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[10][15]_i_1_n_0                                                             | AISO/regfile_reg[6][5][0] |               10 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[11][15]_i_1_n_0                                                             | AISO/regfile_reg[6][5][0] |                6 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/E[0]                                                                                | AISO/AR[0]                |                5 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[1][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][1] |                9 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[8][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][0] |                6 |             32 |
+|  clock_IBUF_BUFG | tb/tramelblaze/regfile[9][15]_i_1_n_0                                                              | AISO/regfile_reg[6][5][0] |                8 |             32 |
+|  clock_IBUF_BUFG |                                                                                                    | AISO/regfile_reg[6][5][1] |                5 |             40 |
+|  clock_IBUF_BUFG |                                                                                                    | AISO/AR[0]                |               11 |             56 |
+|  clock_IBUF_BUFG | tb/tramelblaze/stkr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/we_reg                    |                           |                8 |             64 |
+|  clock_IBUF_BUFG |                                                                                                    | AISO/inst_reg_reg[5][0]   |               37 |            116 |
+|  clock_IBUF_BUFG |                                                                                                    |                           |               20 |            124 |
+|  clock_IBUF_BUFG | tb/tramelblaze/sr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_255_0_0_i_1_n_0   |                           |               16 |            128 |
+|  clock_IBUF_BUFG | tb/tramelblaze/sr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_256_511_0_0_i_1_n_0 |                           |               16 |            128 |
++------------------+----------------------------------------------------------------------------------------------------+---------------------------+------------------+----------------+
+
+

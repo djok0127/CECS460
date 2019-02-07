@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Feb  6 00:10:58 2019
+-- Date        : Wed Feb  6 00:00:22 2019
 -- Host        : DESKTOP-2ECK0P9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top stack_ram -prefix
+--               stack_ram_ stack_ram_sim_netlist.vhdl
 -- Design      : stack_ram
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,23 +16,21 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity stack_ram_spram is
   port (
-    qspo : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    spo : out STD_LOGIC_VECTOR ( 15 downto 0 );
     a : in STD_LOGIC_VECTOR ( 6 downto 0 );
     clk : in STD_LOGIC;
     we : in STD_LOGIC;
     d : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of stack_ram_spram : entity is "spram";
 end stack_ram_spram;
 
 architecture STRUCTURE of stack_ram_spram is
   signal a_reg : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal d_reg : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal qspo_input : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal qspo_int : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of qspo_int : signal is "true";
+  signal \^spo\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal we_reg : STD_LOGIC;
   attribute KEEP : string;
   attribute KEEP of \qspo_int_reg[0]\ : label is "yes";
@@ -69,7 +67,7 @@ architecture STRUCTURE of stack_ram_spram is
   attribute KEEP of \qspo_int_reg[9]\ : label is "yes";
   attribute equivalent_register_removal of \qspo_int_reg[9]\ : label is "no";
 begin
-  qspo(15 downto 0) <= qspo_int(15 downto 0);
+  spo(15 downto 0) <= \^spo\(15 downto 0);
 \a_reg_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -282,7 +280,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(0),
+      D => \^spo\(0),
       Q => qspo_int(0),
       R => '0'
     );
@@ -293,7 +291,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(10),
+      D => \^spo\(10),
       Q => qspo_int(10),
       R => '0'
     );
@@ -304,7 +302,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(11),
+      D => \^spo\(11),
       Q => qspo_int(11),
       R => '0'
     );
@@ -315,7 +313,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(12),
+      D => \^spo\(12),
       Q => qspo_int(12),
       R => '0'
     );
@@ -326,7 +324,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(13),
+      D => \^spo\(13),
       Q => qspo_int(13),
       R => '0'
     );
@@ -337,7 +335,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(14),
+      D => \^spo\(14),
       Q => qspo_int(14),
       R => '0'
     );
@@ -348,7 +346,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(15),
+      D => \^spo\(15),
       Q => qspo_int(15),
       R => '0'
     );
@@ -359,7 +357,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(1),
+      D => \^spo\(1),
       Q => qspo_int(1),
       R => '0'
     );
@@ -370,7 +368,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(2),
+      D => \^spo\(2),
       Q => qspo_int(2),
       R => '0'
     );
@@ -381,7 +379,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(3),
+      D => \^spo\(3),
       Q => qspo_int(3),
       R => '0'
     );
@@ -392,7 +390,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(4),
+      D => \^spo\(4),
       Q => qspo_int(4),
       R => '0'
     );
@@ -403,7 +401,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(5),
+      D => \^spo\(5),
       Q => qspo_int(5),
       R => '0'
     );
@@ -414,7 +412,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(6),
+      D => \^spo\(6),
       Q => qspo_int(6),
       R => '0'
     );
@@ -425,7 +423,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(7),
+      D => \^spo\(7),
       Q => qspo_int(7),
       R => '0'
     );
@@ -436,7 +434,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(8),
+      D => \^spo\(8),
       Q => qspo_int(8),
       R => '0'
     );
@@ -447,7 +445,7 @@ begin
         port map (
       C => clk,
       CE => '1',
-      D => qspo_input(9),
+      D => \^spo\(9),
       Q => qspo_int(9),
       R => '0'
     );
@@ -464,7 +462,7 @@ ram_reg_0_127_0_0: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(0),
-      O => qspo_input(0),
+      O => \^spo\(0),
       WCLK => clk,
       WE => we_reg
     );
@@ -481,7 +479,7 @@ ram_reg_0_127_10_10: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(10),
-      O => qspo_input(10),
+      O => \^spo\(10),
       WCLK => clk,
       WE => we_reg
     );
@@ -498,7 +496,7 @@ ram_reg_0_127_11_11: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(11),
-      O => qspo_input(11),
+      O => \^spo\(11),
       WCLK => clk,
       WE => we_reg
     );
@@ -515,7 +513,7 @@ ram_reg_0_127_12_12: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(12),
-      O => qspo_input(12),
+      O => \^spo\(12),
       WCLK => clk,
       WE => we_reg
     );
@@ -532,7 +530,7 @@ ram_reg_0_127_13_13: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(13),
-      O => qspo_input(13),
+      O => \^spo\(13),
       WCLK => clk,
       WE => we_reg
     );
@@ -549,7 +547,7 @@ ram_reg_0_127_14_14: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(14),
-      O => qspo_input(14),
+      O => \^spo\(14),
       WCLK => clk,
       WE => we_reg
     );
@@ -566,7 +564,7 @@ ram_reg_0_127_15_15: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(15),
-      O => qspo_input(15),
+      O => \^spo\(15),
       WCLK => clk,
       WE => we_reg
     );
@@ -583,7 +581,7 @@ ram_reg_0_127_1_1: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(1),
-      O => qspo_input(1),
+      O => \^spo\(1),
       WCLK => clk,
       WE => we_reg
     );
@@ -600,7 +598,7 @@ ram_reg_0_127_2_2: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(2),
-      O => qspo_input(2),
+      O => \^spo\(2),
       WCLK => clk,
       WE => we_reg
     );
@@ -617,7 +615,7 @@ ram_reg_0_127_3_3: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(3),
-      O => qspo_input(3),
+      O => \^spo\(3),
       WCLK => clk,
       WE => we_reg
     );
@@ -634,7 +632,7 @@ ram_reg_0_127_4_4: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(4),
-      O => qspo_input(4),
+      O => \^spo\(4),
       WCLK => clk,
       WE => we_reg
     );
@@ -651,7 +649,7 @@ ram_reg_0_127_5_5: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(5),
-      O => qspo_input(5),
+      O => \^spo\(5),
       WCLK => clk,
       WE => we_reg
     );
@@ -668,7 +666,7 @@ ram_reg_0_127_6_6: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(6),
-      O => qspo_input(6),
+      O => \^spo\(6),
       WCLK => clk,
       WE => we_reg
     );
@@ -685,7 +683,7 @@ ram_reg_0_127_7_7: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(7),
-      O => qspo_input(7),
+      O => \^spo\(7),
       WCLK => clk,
       WE => we_reg
     );
@@ -702,7 +700,7 @@ ram_reg_0_127_8_8: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(8),
-      O => qspo_input(8),
+      O => \^spo\(8),
       WCLK => clk,
       WE => we_reg
     );
@@ -719,7 +717,7 @@ ram_reg_0_127_9_9: unisim.vcomponents.RAM128X1S
       A5 => a_reg(5),
       A6 => a_reg(6),
       D => d_reg(9),
-      O => qspo_input(9),
+      O => \^spo\(9),
       WCLK => clk,
       WE => we_reg
     );
@@ -738,14 +736,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity stack_ram_dist_mem_gen_v8_0_12_synth is
   port (
-    qspo : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    spo : out STD_LOGIC_VECTOR ( 15 downto 0 );
     a : in STD_LOGIC_VECTOR ( 6 downto 0 );
     clk : in STD_LOGIC;
     we : in STD_LOGIC;
     d : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of stack_ram_dist_mem_gen_v8_0_12_synth : entity is "dist_mem_gen_v8_0_12_synth";
 end stack_ram_dist_mem_gen_v8_0_12_synth;
 
 architecture STRUCTURE of stack_ram_dist_mem_gen_v8_0_12_synth is
@@ -755,7 +751,7 @@ begin
       a(6 downto 0) => a(6 downto 0),
       clk => clk,
       d(15 downto 0) => d(15 downto 0),
-      qspo(15 downto 0) => qspo(15 downto 0),
+      spo(15 downto 0) => spo(15 downto 0),
       we => we
     );
 end STRUCTURE;
@@ -814,7 +810,7 @@ entity stack_ram_dist_mem_gen_v8_0_12 is
   attribute C_HAS_QDPO_SRST : integer;
   attribute C_HAS_QDPO_SRST of stack_ram_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_HAS_QSPO : integer;
-  attribute C_HAS_QSPO of stack_ram_dist_mem_gen_v8_0_12 : entity is 1;
+  attribute C_HAS_QSPO of stack_ram_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_HAS_QSPO_CE : integer;
   attribute C_HAS_QSPO_CE of stack_ram_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_HAS_QSPO_RST : integer;
@@ -822,7 +818,7 @@ entity stack_ram_dist_mem_gen_v8_0_12 is
   attribute C_HAS_QSPO_SRST : integer;
   attribute C_HAS_QSPO_SRST of stack_ram_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_HAS_SPO : integer;
-  attribute C_HAS_SPO of stack_ram_dist_mem_gen_v8_0_12 : entity is 0;
+  attribute C_HAS_SPO of stack_ram_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_HAS_WE : integer;
   attribute C_HAS_WE of stack_ram_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_MEM_INIT_FILE : string;
@@ -847,8 +843,6 @@ entity stack_ram_dist_mem_gen_v8_0_12 is
   attribute C_SYNC_ENABLE of stack_ram_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of stack_ram_dist_mem_gen_v8_0_12 : entity is 16;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of stack_ram_dist_mem_gen_v8_0_12 : entity is "dist_mem_gen_v8_0_12";
 end stack_ram_dist_mem_gen_v8_0_12;
 
 architecture STRUCTURE of stack_ram_dist_mem_gen_v8_0_12 is
@@ -886,22 +880,22 @@ begin
   qdpo(2) <= \<const0>\;
   qdpo(1) <= \<const0>\;
   qdpo(0) <= \<const0>\;
-  spo(15) <= \<const0>\;
-  spo(14) <= \<const0>\;
-  spo(13) <= \<const0>\;
-  spo(12) <= \<const0>\;
-  spo(11) <= \<const0>\;
-  spo(10) <= \<const0>\;
-  spo(9) <= \<const0>\;
-  spo(8) <= \<const0>\;
-  spo(7) <= \<const0>\;
-  spo(6) <= \<const0>\;
-  spo(5) <= \<const0>\;
-  spo(4) <= \<const0>\;
-  spo(3) <= \<const0>\;
-  spo(2) <= \<const0>\;
-  spo(1) <= \<const0>\;
-  spo(0) <= \<const0>\;
+  qspo(15) <= \<const0>\;
+  qspo(14) <= \<const0>\;
+  qspo(13) <= \<const0>\;
+  qspo(12) <= \<const0>\;
+  qspo(11) <= \<const0>\;
+  qspo(10) <= \<const0>\;
+  qspo(9) <= \<const0>\;
+  qspo(8) <= \<const0>\;
+  qspo(7) <= \<const0>\;
+  qspo(6) <= \<const0>\;
+  qspo(5) <= \<const0>\;
+  qspo(4) <= \<const0>\;
+  qspo(3) <= \<const0>\;
+  qspo(2) <= \<const0>\;
+  qspo(1) <= \<const0>\;
+  qspo(0) <= \<const0>\;
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
@@ -911,7 +905,7 @@ GND: unisim.vcomponents.GND
       a(6 downto 0) => a(6 downto 0),
       clk => clk,
       d(15 downto 0) => d(15 downto 0),
-      qspo(15 downto 0) => qspo(15 downto 0),
+      spo(15 downto 0) => spo(15 downto 0),
       we => we
     );
 end STRUCTURE;
@@ -925,7 +919,7 @@ entity stack_ram is
     d : in STD_LOGIC_VECTOR ( 15 downto 0 );
     clk : in STD_LOGIC;
     we : in STD_LOGIC;
-    qspo : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    spo : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of stack_ram : entity is true;
@@ -940,7 +934,7 @@ end stack_ram;
 architecture STRUCTURE of stack_ram is
   signal NLW_U0_dpo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_U0_qdpo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal NLW_U0_spo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal NLW_U0_qspo_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "artix7";
   attribute C_HAS_CLK : integer;
@@ -980,7 +974,7 @@ architecture STRUCTURE of stack_ram is
   attribute c_has_i_ce : integer;
   attribute c_has_i_ce of U0 : label is 0;
   attribute c_has_qspo : integer;
-  attribute c_has_qspo of U0 : label is 1;
+  attribute c_has_qspo of U0 : label is 0;
   attribute c_has_qspo_ce : integer;
   attribute c_has_qspo_ce of U0 : label is 0;
   attribute c_has_qspo_rst : integer;
@@ -988,7 +982,7 @@ architecture STRUCTURE of stack_ram is
   attribute c_has_qspo_srst : integer;
   attribute c_has_qspo_srst of U0 : label is 0;
   attribute c_has_spo : integer;
-  attribute c_has_spo of U0 : label is 0;
+  attribute c_has_spo of U0 : label is 1;
   attribute c_mem_init_file : string;
   attribute c_mem_init_file of U0 : label is "no_coe_file_loaded";
   attribute c_parser_type : integer;
@@ -1019,11 +1013,11 @@ U0: entity work.stack_ram_dist_mem_gen_v8_0_12
       qdpo_clk => '0',
       qdpo_rst => '0',
       qdpo_srst => '0',
-      qspo(15 downto 0) => qspo(15 downto 0),
+      qspo(15 downto 0) => NLW_U0_qspo_UNCONNECTED(15 downto 0),
       qspo_ce => '1',
       qspo_rst => '0',
       qspo_srst => '0',
-      spo(15 downto 0) => NLW_U0_spo_UNCONNECTED(15 downto 0),
+      spo(15 downto 0) => spo(15 downto 0),
       we => we
     );
 end STRUCTURE;

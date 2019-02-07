@@ -17,8 +17,8 @@ module display(
     input clk,
     input reset,
     input      [15:0] seg,
-    output [7:0] a,
-    output [6:0] cathodes
+    output reg [7:0] a,
+    output reg [6:0] cathodes
     );
      
     //////////////////////////////////
@@ -28,7 +28,6 @@ module display(
     wire 	   tick;
 	reg  [3:0] hex_wire;
 	reg [19:0] count, d;
-    reg  [6:0] cathodes;
 
 	//////////////////////////////////////////
     // This combinational block adds 1 bit  //
@@ -59,7 +58,6 @@ module display(
     reg [2:0] PS;
     reg [2:0] NS;                             
     reg [2:0] seg_sel;
-    reg [7:0] a;
                              
     //************************************************************************
     // Next State Combinational Logic

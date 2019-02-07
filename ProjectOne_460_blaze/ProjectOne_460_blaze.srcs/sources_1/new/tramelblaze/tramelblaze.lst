@@ -33,22 +33,22 @@
                ; set up for loop in isr
                
                ISR
-               			INPUT RA, ANYADRS
-0300 A20A 0460
-               			AND ,RA 0001
+               			INPUT RA, 0001
+0300 A20A 0001
+               			AND RA, 0001
 0302 8A0A 0001
                			JUMPZ DECREMENT
 0304 AA00 030b
                			ADD R9, ONE
 0306 8209 0001
-               			OUTPUT R9, 1234
-0308 B809 1234
+               			OUTPUT R9, 0001
+0308 B809 0001
                			RETEN
 030A 4600               			
                DECREMENT	SUB	R9, ONE
 030B DC09 0001
-               			OUTPUT R9, 1234
-030D B809 1234
+               			OUTPUT R9, 0001
+030D B809 0001
                			RETEN
 030F 4600               			
                ; ISR vectored through 0FFE

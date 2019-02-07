@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Feb  6 00:11:18 2019
+// Date        : Wed Feb  6 00:00:55 2019
 // Host        : DESKTOP-2ECK0P9 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top scratch_ram -prefix
+//               scratch_ram_ scratch_ram_sim_netlist.v
 // Design      : scratch_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,21 +19,21 @@ module scratch_ram
     d,
     clk,
     we,
-    qspo);
+    spo);
   input [8:0]a;
   input [15:0]d;
   input clk;
   input we;
-  output [15:0]qspo;
+  output [15:0]spo;
 
   wire [8:0]a;
   wire clk;
   wire [15:0]d;
-  wire [15:0]qspo;
+  wire [15:0]spo;
   wire we;
   wire [15:0]NLW_U0_dpo_UNCONNECTED;
   wire [15:0]NLW_U0_qdpo_UNCONNECTED;
-  wire [15:0]NLW_U0_spo_UNCONNECTED;
+  wire [15:0]NLW_U0_qspo_UNCONNECTED;
 
   (* C_FAMILY = "artix7" *) 
   (* C_HAS_CLK = "1" *) 
@@ -54,11 +54,11 @@ module scratch_ram
   (* c_depth = "512" *) 
   (* c_elaboration_dir = "./" *) 
   (* c_has_i_ce = "0" *) 
-  (* c_has_qspo = "1" *) 
+  (* c_has_qspo = "0" *) 
   (* c_has_qspo_ce = "0" *) 
   (* c_has_qspo_rst = "0" *) 
   (* c_has_qspo_srst = "0" *) 
-  (* c_has_spo = "0" *) 
+  (* c_has_spo = "1" *) 
   (* c_mem_init_file = "no_coe_file_loaded" *) 
   (* c_parser_type = "1" *) 
   (* c_pipeline_stages = "0" *) 
@@ -79,11 +79,11 @@ module scratch_ram
         .qdpo_clk(1'b0),
         .qdpo_rst(1'b0),
         .qdpo_srst(1'b0),
-        .qspo(qspo),
+        .qspo(NLW_U0_qspo_UNCONNECTED[15:0]),
         .qspo_ce(1'b1),
         .qspo_rst(1'b0),
         .qspo_srst(1'b0),
-        .spo(NLW_U0_spo_UNCONNECTED[15:0]),
+        .spo(spo),
         .we(we));
 endmodule
 
@@ -92,12 +92,12 @@ endmodule
 (* C_HAS_D = "1" *) (* C_HAS_DPO = "0" *) (* C_HAS_DPRA = "0" *) 
 (* C_HAS_I_CE = "0" *) (* C_HAS_QDPO = "0" *) (* C_HAS_QDPO_CE = "0" *) 
 (* C_HAS_QDPO_CLK = "0" *) (* C_HAS_QDPO_RST = "0" *) (* C_HAS_QDPO_SRST = "0" *) 
-(* C_HAS_QSPO = "1" *) (* C_HAS_QSPO_CE = "0" *) (* C_HAS_QSPO_RST = "0" *) 
-(* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "0" *) (* C_HAS_WE = "1" *) 
+(* C_HAS_QSPO = "0" *) (* C_HAS_QSPO_CE = "0" *) (* C_HAS_QSPO_RST = "0" *) 
+(* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "1" *) (* C_HAS_WE = "1" *) 
 (* C_MEM_INIT_FILE = "no_coe_file_loaded" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "0" *) (* C_REG_A_D_INPUTS = "1" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_12" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) 
 module scratch_ram_dist_mem_gen_v8_0_12
    (a,
     d,
@@ -138,7 +138,7 @@ module scratch_ram_dist_mem_gen_v8_0_12
   wire [8:0]a;
   wire clk;
   wire [15:0]d;
-  wire [15:0]qspo;
+  wire [15:0]spo;
   wire we;
 
   assign dpo[15] = \<const0> ;
@@ -173,40 +173,39 @@ module scratch_ram_dist_mem_gen_v8_0_12
   assign qdpo[2] = \<const0> ;
   assign qdpo[1] = \<const0> ;
   assign qdpo[0] = \<const0> ;
-  assign spo[15] = \<const0> ;
-  assign spo[14] = \<const0> ;
-  assign spo[13] = \<const0> ;
-  assign spo[12] = \<const0> ;
-  assign spo[11] = \<const0> ;
-  assign spo[10] = \<const0> ;
-  assign spo[9] = \<const0> ;
-  assign spo[8] = \<const0> ;
-  assign spo[7] = \<const0> ;
-  assign spo[6] = \<const0> ;
-  assign spo[5] = \<const0> ;
-  assign spo[4] = \<const0> ;
-  assign spo[3] = \<const0> ;
-  assign spo[2] = \<const0> ;
-  assign spo[1] = \<const0> ;
-  assign spo[0] = \<const0> ;
+  assign qspo[15] = \<const0> ;
+  assign qspo[14] = \<const0> ;
+  assign qspo[13] = \<const0> ;
+  assign qspo[12] = \<const0> ;
+  assign qspo[11] = \<const0> ;
+  assign qspo[10] = \<const0> ;
+  assign qspo[9] = \<const0> ;
+  assign qspo[8] = \<const0> ;
+  assign qspo[7] = \<const0> ;
+  assign qspo[6] = \<const0> ;
+  assign qspo[5] = \<const0> ;
+  assign qspo[4] = \<const0> ;
+  assign qspo[3] = \<const0> ;
+  assign qspo[2] = \<const0> ;
+  assign qspo[1] = \<const0> ;
+  assign qspo[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
   scratch_ram_dist_mem_gen_v8_0_12_synth \synth_options.dist_mem_inst 
        (.a(a),
         .clk(clk),
         .d(d),
-        .qspo(qspo),
+        .spo(spo),
         .we(we));
 endmodule
 
-(* ORIG_REF_NAME = "dist_mem_gen_v8_0_12_synth" *) 
 module scratch_ram_dist_mem_gen_v8_0_12_synth
-   (qspo,
+   (spo,
     a,
     clk,
     we,
     d);
-  output [15:0]qspo;
+  output [15:0]spo;
   input [8:0]a;
   input clk;
   input we;
@@ -215,25 +214,24 @@ module scratch_ram_dist_mem_gen_v8_0_12_synth
   wire [8:0]a;
   wire clk;
   wire [15:0]d;
-  wire [15:0]qspo;
+  wire [15:0]spo;
   wire we;
 
   scratch_ram_spram \gen_sp_ram.spram_inst 
        (.a(a),
         .clk(clk),
         .d(d),
-        .qspo(qspo),
+        .spo(spo),
         .we(we));
 endmodule
 
-(* ORIG_REF_NAME = "spram" *) 
 module scratch_ram_spram
-   (qspo,
+   (spo,
     a,
     clk,
     we,
     d);
-  output [15:0]qspo;
+  output [15:0]spo;
   input [8:0]a;
   input clk;
   input we;
@@ -244,7 +242,6 @@ module scratch_ram_spram
   wire clk;
   wire [15:0]d;
   wire [15:0]d_reg;
-  wire [15:0]qspo_input;
   (* RTL_KEEP = "true" *) wire [15:0]qspo_int;
   wire ram_reg_0_255_0_0_i_1_n_0;
   wire ram_reg_0_255_0_0_n_0;
@@ -280,10 +277,10 @@ module scratch_ram_spram
   wire ram_reg_256_511_7_7_n_0;
   wire ram_reg_256_511_8_8_n_0;
   wire ram_reg_256_511_9_9_n_0;
+  wire [15:0]spo;
   wire we;
   wire we_reg;
 
-  assign qspo[15:0] = qspo_int;
   FDRE #(
     .INIT(1'b0)) 
     \a_reg_reg[0] 
@@ -452,134 +449,6 @@ module scratch_ram_spram
         .D(d[9]),
         .Q(d_reg[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[0]_i_1 
-       (.I0(ram_reg_256_511_0_0_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_0_0_n_0),
-        .O(qspo_input[0]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[10]_i_1 
-       (.I0(ram_reg_256_511_10_10_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_10_10_n_0),
-        .O(qspo_input[10]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[11]_i_1 
-       (.I0(ram_reg_256_511_11_11_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_11_11_n_0),
-        .O(qspo_input[11]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[12]_i_1 
-       (.I0(ram_reg_256_511_12_12_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_12_12_n_0),
-        .O(qspo_input[12]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[13]_i_1 
-       (.I0(ram_reg_256_511_13_13_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_13_13_n_0),
-        .O(qspo_input[13]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[14]_i_1 
-       (.I0(ram_reg_256_511_14_14_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_14_14_n_0),
-        .O(qspo_input[14]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[15]_i_1 
-       (.I0(ram_reg_256_511_15_15_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_15_15_n_0),
-        .O(qspo_input[15]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[1]_i_1 
-       (.I0(ram_reg_256_511_1_1_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_1_1_n_0),
-        .O(qspo_input[1]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[2]_i_1 
-       (.I0(ram_reg_256_511_2_2_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_2_2_n_0),
-        .O(qspo_input[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[3]_i_1 
-       (.I0(ram_reg_256_511_3_3_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_3_3_n_0),
-        .O(qspo_input[3]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[4]_i_1 
-       (.I0(ram_reg_256_511_4_4_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_4_4_n_0),
-        .O(qspo_input[4]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[5]_i_1 
-       (.I0(ram_reg_256_511_5_5_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_5_5_n_0),
-        .O(qspo_input[5]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[6]_i_1 
-       (.I0(ram_reg_256_511_6_6_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_6_6_n_0),
-        .O(qspo_input[6]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[7]_i_1 
-       (.I0(ram_reg_256_511_7_7_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_7_7_n_0),
-        .O(qspo_input[7]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[8]_i_1 
-       (.I0(ram_reg_256_511_8_8_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_8_8_n_0),
-        .O(qspo_input[8]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \qspo_int[9]_i_1 
-       (.I0(ram_reg_256_511_9_9_n_0),
-        .I1(a_reg[8]),
-        .I2(ram_reg_0_255_9_9_n_0),
-        .O(qspo_input[9]));
   (* KEEP = "yes" *) 
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -587,7 +456,7 @@ module scratch_ram_spram
     \qspo_int_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[0]),
+        .D(spo[0]),
         .Q(qspo_int[0]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -597,7 +466,7 @@ module scratch_ram_spram
     \qspo_int_reg[10] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[10]),
+        .D(spo[10]),
         .Q(qspo_int[10]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -607,7 +476,7 @@ module scratch_ram_spram
     \qspo_int_reg[11] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[11]),
+        .D(spo[11]),
         .Q(qspo_int[11]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -617,7 +486,7 @@ module scratch_ram_spram
     \qspo_int_reg[12] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[12]),
+        .D(spo[12]),
         .Q(qspo_int[12]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -627,7 +496,7 @@ module scratch_ram_spram
     \qspo_int_reg[13] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[13]),
+        .D(spo[13]),
         .Q(qspo_int[13]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -637,7 +506,7 @@ module scratch_ram_spram
     \qspo_int_reg[14] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[14]),
+        .D(spo[14]),
         .Q(qspo_int[14]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -647,7 +516,7 @@ module scratch_ram_spram
     \qspo_int_reg[15] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[15]),
+        .D(spo[15]),
         .Q(qspo_int[15]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -657,7 +526,7 @@ module scratch_ram_spram
     \qspo_int_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[1]),
+        .D(spo[1]),
         .Q(qspo_int[1]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -667,7 +536,7 @@ module scratch_ram_spram
     \qspo_int_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[2]),
+        .D(spo[2]),
         .Q(qspo_int[2]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -677,7 +546,7 @@ module scratch_ram_spram
     \qspo_int_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[3]),
+        .D(spo[3]),
         .Q(qspo_int[3]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -687,7 +556,7 @@ module scratch_ram_spram
     \qspo_int_reg[4] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[4]),
+        .D(spo[4]),
         .Q(qspo_int[4]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -697,7 +566,7 @@ module scratch_ram_spram
     \qspo_int_reg[5] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[5]),
+        .D(spo[5]),
         .Q(qspo_int[5]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -707,7 +576,7 @@ module scratch_ram_spram
     \qspo_int_reg[6] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[6]),
+        .D(spo[6]),
         .Q(qspo_int[6]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -717,7 +586,7 @@ module scratch_ram_spram
     \qspo_int_reg[7] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[7]),
+        .D(spo[7]),
         .Q(qspo_int[7]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -727,7 +596,7 @@ module scratch_ram_spram
     \qspo_int_reg[8] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[8]),
+        .D(spo[8]),
         .Q(qspo_int[8]),
         .R(1'b0));
   (* KEEP = "yes" *) 
@@ -737,7 +606,7 @@ module scratch_ram_spram
     \qspo_int_reg[9] 
        (.C(clk),
         .CE(1'b1),
-        .D(qspo_input[9]),
+        .D(spo[9]),
         .Q(qspo_int[9]),
         .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-5 {cell *THIS*}}" *) 
@@ -1040,6 +909,134 @@ module scratch_ram_spram
         .O(ram_reg_256_511_9_9_n_0),
         .WCLK(clk),
         .WE(ram_reg_256_511_0_0_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[0]_INST_0 
+       (.I0(ram_reg_256_511_0_0_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_0_0_n_0),
+        .O(spo[0]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[10]_INST_0 
+       (.I0(ram_reg_256_511_10_10_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_10_10_n_0),
+        .O(spo[10]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[11]_INST_0 
+       (.I0(ram_reg_256_511_11_11_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_11_11_n_0),
+        .O(spo[11]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[12]_INST_0 
+       (.I0(ram_reg_256_511_12_12_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_12_12_n_0),
+        .O(spo[12]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[13]_INST_0 
+       (.I0(ram_reg_256_511_13_13_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_13_13_n_0),
+        .O(spo[13]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[14]_INST_0 
+       (.I0(ram_reg_256_511_14_14_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_14_14_n_0),
+        .O(spo[14]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[15]_INST_0 
+       (.I0(ram_reg_256_511_15_15_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_15_15_n_0),
+        .O(spo[15]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[1]_INST_0 
+       (.I0(ram_reg_256_511_1_1_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_1_1_n_0),
+        .O(spo[1]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[2]_INST_0 
+       (.I0(ram_reg_256_511_2_2_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_2_2_n_0),
+        .O(spo[2]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[3]_INST_0 
+       (.I0(ram_reg_256_511_3_3_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_3_3_n_0),
+        .O(spo[3]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[4]_INST_0 
+       (.I0(ram_reg_256_511_4_4_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_4_4_n_0),
+        .O(spo[4]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[5]_INST_0 
+       (.I0(ram_reg_256_511_5_5_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_5_5_n_0),
+        .O(spo[5]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[6]_INST_0 
+       (.I0(ram_reg_256_511_6_6_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_6_6_n_0),
+        .O(spo[6]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[7]_INST_0 
+       (.I0(ram_reg_256_511_7_7_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_7_7_n_0),
+        .O(spo[7]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[8]_INST_0 
+       (.I0(ram_reg_256_511_8_8_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_8_8_n_0),
+        .O(spo[8]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \spo[9]_INST_0 
+       (.I0(ram_reg_256_511_9_9_n_0),
+        .I1(a_reg[8]),
+        .I2(ram_reg_0_255_9_9_n_0),
+        .O(spo[9]));
   FDRE we_reg_reg
        (.C(clk),
         .CE(1'b1),
