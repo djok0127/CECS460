@@ -1,20 +1,14 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto b7ca799a7d224dbbb3efd9755b606f14 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tramelblaze_top_tb_behav xil_defaultlib.tramelblaze_top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto b7ca799a7d224dbbb3efd9755b606f14 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot pulse_gen_tb_behav xil_defaultlib.pulse_gen_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 20 for port flag [C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/pulse_gen_tb.v:30]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
-Compiling module xil_defaultlib.stack_ram
-Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
-Compiling module xil_defaultlib.scratch_ram
-Compiling module xil_defaultlib.tramelblaze
-Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
-Compiling module xil_defaultlib.tb_rom
-Compiling module xil_defaultlib.tramelblaze_top
-Compiling module xil_defaultlib.tramelblaze_top_tb
+Compiling module xil_defaultlib.pulse_gen
+Compiling module xil_defaultlib.pulse_gen_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tramelblaze_top_tb_behav
+Built simulation snapshot pulse_gen_tb_behav

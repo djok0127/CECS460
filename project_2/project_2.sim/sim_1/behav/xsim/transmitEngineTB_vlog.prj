@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_2.srcs/sources_1/new/baud_decode.v" \
+"../../../../project_2.srcs/sources_1/new/bit_counter.v" \
+"../../../../project_2.srcs/sources_1/new/bit_time_counter.v" \
+"../../../../project_2.srcs/sources_1/new/d_flop.v" \
+"../../../../project_2.srcs/sources_1/new/decode.v" \
+"../../../../project_2.srcs/sources_1/new/shift_reg.v" \
+"../../../../project_2.srcs/sources_1/new/sr_flop.v" \
+"../../../../project_2.srcs/sources_1/new/transmit_engine.v" \
+"../../../../project_2.srcs/sim_1/new/tx_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

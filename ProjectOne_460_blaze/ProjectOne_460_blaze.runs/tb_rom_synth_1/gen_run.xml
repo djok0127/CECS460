@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="tb_rom_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1549494519">
   <File Type="PA-TCL" Name="tb_rom.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="tb_rom_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="tb_rom_reports.tcl"/>
   <File Type="RDS-RDS" Name="tb_rom.vds"/>
   <File Type="RDS-UTIL" Name="tb_rom_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="tb_rom_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="tb_rom.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="tb_rom_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="tb_rom_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/tb_rom">
     <File Path="$PSRCDIR/sources_1/ip/tb_rom/tb_rom.xci">
       <FileInfo>
@@ -36,9 +33,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

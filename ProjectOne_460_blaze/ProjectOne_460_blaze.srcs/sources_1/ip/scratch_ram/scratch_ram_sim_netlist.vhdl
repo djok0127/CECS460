@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Feb  6 00:00:55 2019
+-- Date        : Tue Mar 19 23:40:14 2019
 -- Host        : DESKTOP-2ECK0P9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top scratch_ram -prefix
---               scratch_ram_ scratch_ram_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram_sim_netlist.vhdl
 -- Design      : scratch_ram
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,8 @@ entity scratch_ram_spram is
     we : in STD_LOGIC;
     d : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of scratch_ram_spram : entity is "spram";
 end scratch_ram_spram;
 
 architecture STRUCTURE of scratch_ram_spram is
@@ -1106,6 +1108,8 @@ entity scratch_ram_dist_mem_gen_v8_0_12_synth is
     we : in STD_LOGIC;
     d : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of scratch_ram_dist_mem_gen_v8_0_12_synth : entity is "dist_mem_gen_v8_0_12_synth";
 end scratch_ram_dist_mem_gen_v8_0_12_synth;
 
 architecture STRUCTURE of scratch_ram_dist_mem_gen_v8_0_12_synth is
@@ -1207,6 +1211,8 @@ entity scratch_ram_dist_mem_gen_v8_0_12 is
   attribute C_SYNC_ENABLE of scratch_ram_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of scratch_ram_dist_mem_gen_v8_0_12 : entity is 16;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of scratch_ram_dist_mem_gen_v8_0_12 : entity is "dist_mem_gen_v8_0_12";
 end scratch_ram_dist_mem_gen_v8_0_12;
 
 architecture STRUCTURE of scratch_ram_dist_mem_gen_v8_0_12 is

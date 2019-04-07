@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Feb  6 00:00:55 2019
+// Date        : Tue Mar 19 23:40:14 2019
 // Host        : DESKTOP-2ECK0P9 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top scratch_ram -prefix
-//               scratch_ram_ scratch_ram_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram_sim_netlist.v
 // Design      : scratch_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -97,7 +97,7 @@ endmodule
 (* C_MEM_INIT_FILE = "no_coe_file_loaded" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
 (* C_READ_MIF = "0" *) (* C_REG_A_D_INPUTS = "1" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "16" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_12" *) 
 module scratch_ram_dist_mem_gen_v8_0_12
    (a,
     d,
@@ -199,6 +199,7 @@ module scratch_ram_dist_mem_gen_v8_0_12
         .we(we));
 endmodule
 
+(* ORIG_REF_NAME = "dist_mem_gen_v8_0_12_synth" *) 
 module scratch_ram_dist_mem_gen_v8_0_12_synth
    (spo,
     a,
@@ -225,6 +226,7 @@ module scratch_ram_dist_mem_gen_v8_0_12_synth
         .we(we));
 endmodule
 
+(* ORIG_REF_NAME = "spram" *) 
 module scratch_ram_spram
    (spo,
     a,

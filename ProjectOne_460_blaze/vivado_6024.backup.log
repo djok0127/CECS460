@@ -1,0 +1,468 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Feb  6 23:39:43 2019
+# Process ID: 6024
+# Current directory: C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12316 C:\Users\Chris\Documents\GitHub\CECS_460\ProjectOne_460_blaze\ProjectOne_460_blaze.xpr
+# Log file: C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/vivado.log
+# Journal file: C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/PED.v', nor could it be found using path 'C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/PED.v'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/debounce.v', nor could it be found using path 'C:/Users/Chris/Desktop/Github/cecs460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/debounce.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'scratch_ram' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram_ooc.xdc'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'scratch_ram' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'scratch_ram' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/simulation/dist_mem_gen_v8_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'scratch_ram' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/doc/dist_mem_gen_v8_0_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'stack_ram' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram_ooc.xdc'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'stack_ram' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'stack_ram' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/simulation/dist_mem_gen_v8_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'stack_ram' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/doc/dist_mem_gen_v8_0_changelog.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tb_rom' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/tb_rom_ooc.xdc'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tb_rom' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tb_rom' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/simulation/dist_mem_gen_v8_0.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'tb_rom' generated file not found 'c:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/doc/dist_mem_gen_v8_0_changelog.txt'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 831.449 ; gain = 150.699
+add_files -norecurse {C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/PED.v C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/hex_to_seg.v C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/disp_cont.v C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/pulse_gen.v C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/mux81.v C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/p_con.v}
+WARNING: [filemgmt 56-12] File 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/PED.v' cannot be added to the project because it already exists in the project, skipping this file
+export_ip_user_files -of_objects  [get_files C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/display.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/display.v
+generate_target Simulation [get_files C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'scratch_ram'...
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/scratch_ram.xci] -directory C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target Simulation [get_files C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci]
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'stack_ram'...
+export_ip_user_files -of_objects [get_files C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/stack_ram.xci] -directory C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files -ipstatic_source_dir C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/modelsim} {questa=C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/questa} {riviera=C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/riviera} {activehdl=C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tramelblaze_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/tb_rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/tramelblaze.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tramelblaze_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/sim/tb_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/sim/scratch_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scratch_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/sim/stack_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stack_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/AISO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AISO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/PED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PED
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze
+INFO: [VRFC 10-2458] undeclared symbol ldsp, assumed default net type wire [C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v:203]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/sr_flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_flop
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/d_ff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_ff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/hex_to_seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex_to_7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/disp_cont.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/pulse_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/mux81.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/p_con.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module px_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/ProjectOne_460_blaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProjectOne_460_blaze_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/tramelblaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto b7ca799a7d224dbbb3efd9755b606f14 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tramelblaze_top_tb_behav xil_defaultlib.tramelblaze_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.stack_ram
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.scratch_ram
+Compiling module xil_defaultlib.tramelblaze
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.tb_rom
+Compiling module xil_defaultlib.tramelblaze_top
+Compiling module xil_defaultlib.tramelblaze_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tramelblaze_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tramelblaze_top_tb_behav -key {Behavioral:sim_1:Functional:tramelblaze_top_tb} -tclbatch {tramelblaze_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tramelblaze_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 50000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tramelblaze_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 50000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 889.934 ; gain = 15.504
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tramelblaze_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/tb_rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/tramelblaze.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tramelblaze_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/sim/tb_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/sim/scratch_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scratch_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/sim/stack_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stack_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/AISO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AISO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/PED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PED
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze
+INFO: [VRFC 10-2458] undeclared symbol ldsp, assumed default net type wire [C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v:203]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/sr_flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_flop
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/d_ff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_ff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/hex_to_seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex_to_7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/disp_cont.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/pulse_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/mux81.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/p_con.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module px_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/ProjectOne_460_blaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProjectOne_460_blaze_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/tramelblaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto b7ca799a7d224dbbb3efd9755b606f14 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tramelblaze_top_tb_behav xil_defaultlib.tramelblaze_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.stack_ram
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.scratch_ram
+Compiling module xil_defaultlib.tramelblaze
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.tb_rom
+Compiling module xil_defaultlib.tramelblaze_top
+Compiling module xil_defaultlib.tramelblaze_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tramelblaze_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tramelblaze_top_tb_behav -key {Behavioral:sim_1:Functional:tramelblaze_top_tb} -tclbatch {tramelblaze_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tramelblaze_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 50000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tramelblaze_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 50000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tramelblaze_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/tb_rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/tramelblaze.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tramelblaze_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/sim/tb_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/sim/scratch_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scratch_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/sim/stack_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stack_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/AISO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AISO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/PED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PED
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze
+INFO: [VRFC 10-2458] undeclared symbol ldsp, assumed default net type wire [C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v:203]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/sr_flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_flop
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/d_ff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_ff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/hex_to_seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex_to_7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/disp_cont.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/pulse_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/mux81.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/p_con.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module px_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/ProjectOne_460_blaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProjectOne_460_blaze_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/tramelblaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto b7ca799a7d224dbbb3efd9755b606f14 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tramelblaze_top_tb_behav xil_defaultlib.tramelblaze_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.stack_ram
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.scratch_ram
+Compiling module xil_defaultlib.tramelblaze
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.tb_rom
+Compiling module xil_defaultlib.tramelblaze_top
+Compiling module xil_defaultlib.tramelblaze_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tramelblaze_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tramelblaze_top_tb_behav -key {Behavioral:sim_1:Functional:tramelblaze_top_tb} -tclbatch {tramelblaze_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tramelblaze_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 50000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tramelblaze_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 50000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 907.969 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tramelblaze_top_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/tb_rom.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim/tramelblaze.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tramelblaze_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/sim/tb_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/sim/scratch_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scratch_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/sim/stack_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stack_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/AISO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AISO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/PED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PED
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze
+INFO: [VRFC 10-2458] undeclared symbol ldsp, assumed default net type wire [C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v:203]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/top_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/sr_flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sr_flop
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/d_ff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_ff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/hex_to_seg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hex_to_7seg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/disp_cont.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/pulse_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/mux81.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_8_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sources_1/new/p_con.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module px_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/ProjectOne_460_blaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProjectOne_460_blaze_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.srcs/sim_1/new/tramelblaze_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tramelblaze_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto b7ca799a7d224dbbb3efd9755b606f14 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tramelblaze_top_tb_behav xil_defaultlib.tramelblaze_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.stack_ram
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.scratch_ram
+Compiling module xil_defaultlib.tramelblaze
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.tb_rom
+Compiling module xil_defaultlib.tramelblaze_top
+Compiling module xil_defaultlib.tramelblaze_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tramelblaze_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/ProjectOne_460_blaze.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tramelblaze_top_tb_behav -key {Behavioral:sim_1:Functional:tramelblaze_top_tb} -tclbatch {tramelblaze_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source tramelblaze_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 50000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tramelblaze_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 50000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 913.152 ; gain = 0.926
+save_wave_config {C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/tramelblaze_top_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/tramelblaze_top_tb_behav.wcfg
+set_property xsim.view C:/Users/Chris/Documents/GitHub/CECS_460/ProjectOne_460_blaze/tramelblaze_top_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run tb_rom_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Process appears to be on host 'DESKTOP-M1KD6LV' and cannot be killed from host 'DESKTOP-2ECK0P9'
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  7 01:16:21 2019...

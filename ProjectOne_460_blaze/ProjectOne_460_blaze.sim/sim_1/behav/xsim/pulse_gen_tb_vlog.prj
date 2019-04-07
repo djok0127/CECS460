@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/ip/tb_rom/sim/tb_rom.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/ip/scratch_ram/sim/scratch_ram.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/ip/stack_ram/sim/stack_ram.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/AISO.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/PED.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/debounce.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/tramelblaze_top.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/top_module.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/sr_flop.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/d_ff.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/hex_to_seg.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/disp_cont.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/pulse_gen.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/mux81.v" \
+"../../../../ProjectOne_460_blaze.srcs/sources_1/new/p_con.v" \
+"../../../../ProjectOne_460_blaze.srcs/sim_1/new/ProjectOne_460_blaze_tb.v" \
+"../../../../ProjectOne_460_blaze.srcs/sim_1/new/tramelblaze_tb.v" \
+"../../../../ProjectOne_460_blaze.srcs/sim_1/new/pulse_gen_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

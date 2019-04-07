@@ -76,14 +76,28 @@ initial
         RESET = 1;
         #100
         RESET = 0;
+        
+        // decrement
         repeat (10)
             begin
-                #1000
+                #5
                 @(posedge CLK)
                     INTERRUPT = 1;
                 @(posedge INTERRUPT_ACK)
                     INTERRUPT = 0;
-            end
-    end
+            end // end of repeat
+        
+        // increment
+        IN_PORT = 1;
+        repeat (10)
+                begin
+                    #5
+                    @(posedge CLK)
+                        INTERRUPT = 1;
+                    @(posedge INTERRUPT_ACK)
+                        INTERRUPT = 0;
+                end // end of repeat
+                            
+    end // end of initial
     
-endmodule
+endmodule // end of tramel blaze testbench

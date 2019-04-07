@@ -1,26 +1,20 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 02/06/2019 02:03:29 PM
-// Design Name: 
-// Module Name: sr_flop
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+//****************************************************************//
+//  File name: sr_flop.v                                          //
+//                                                                //
+//  Created by       Dong Jae Shin on 2/7/2019.                   //
+//  Copyright © 2019 Dong Jae Shin. All rights reserved.          //
+//                                                                //
+//  Description: detects interrupt acknowledge from tramel blaze  //
+//                                                                //
+//  In submitting this file for class work at CSULB               //
+//  I am confirming that this is my work and the work             //
+//  of no one else. In submitting this code I acknowledge that    //
+//  plagiarism in student project work is subject to dismissal.   // 
+//  from the class                                                //
+//****************************************************************//
 
-
-module sr_flop(clock, reset, s, r, q);
+module sr_f(clock, reset, s, r, q);
     
     input clock, reset, s, r;
     output reg q;

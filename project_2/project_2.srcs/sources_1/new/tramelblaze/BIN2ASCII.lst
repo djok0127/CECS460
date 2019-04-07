@@ -1,0 +1,267 @@
+               
+               
+               
+               
+               ; REGISTERS
+               NEW_LINE		EQU		R0
+               CHARACTERS 		EQU		R1
+               TEMP_CHAR		EQU		R2
+               COUNTER			EQU		R3
+               C_D				EQU 	R4
+               LED_OUTPUT		EQU		R5
+               
+               START			
+               				LOAD NEW_LINE,	0001 	; R1 <- 0001
+0000 AE00 0001
+               				LOAD TEMP_CHAR, 0000 	; R2 <- 0000
+0002 AE02 0000
+               				LOAD C_D,		0001
+0004 AE04 0001
+               				
+               				; LOAD CHARACTERS
+               				LOAD CHARACTERS, 0043   ; <- "C"
+0006 AE01 0043
+               				STORE CHARACTERS, 0000
+0008 F401 0000
+               				
+               				LOAD CHARACTERS, 0053   ; <- "S"
+000A AE01 0053
+               				STORE CHARACTERS, 0001
+000C F401 0001
+               				
+               				LOAD CHARACTERS, 0055   ; <- "U"
+000E AE01 0055
+               				STORE CHARACTERS, 0002
+0010 F401 0002
+               				
+               				LOAD CHARACTERS, 004C   ; <- "L"
+0012 AE01 004C
+               				STORE CHARACTERS, 0003
+0014 F401 0003
+               				
+               				LOAD CHARACTERS, 0042   ; <- "B"
+0016 AE01 0042
+               				STORE CHARACTERS, 0004
+0018 F401 0004
+               				
+               				LOAD CHARACTERS, 0020   ; <- " "
+001A AE01 0020
+               				STORE CHARACTERS, 0005
+001C F401 0005
+               				
+               				LOAD CHARACTERS, 0043   ; <- "C"
+001E AE01 0043
+               				STORE CHARACTERS, 0006
+0020 F401 0006
+               				
+               				LOAD CHARACTERS, 0045   ; <- "E"
+0022 AE01 0045
+               				STORE CHARACTERS, 0007
+0024 F401 0007
+               				
+               				LOAD CHARACTERS, 0043   ; <- "C"
+0026 AE01 0043
+               				STORE CHARACTERS, 0008
+0028 F401 0008
+               				
+               				LOAD CHARACTERS, 0053   ; <- "S"
+002A AE01 0053
+               				STORE CHARACTERS, 0009
+002C F401 0009
+               				
+               				LOAD CHARACTERS, 0020   ; <- " "
+002E AE01 0020
+               				STORE CHARACTERS, 000A
+0030 F401 000A
+               				
+               				LOAD CHARACTERS, 0034   ; <- "4"
+0032 AE01 0034
+               				STORE CHARACTERS, 000B
+0034 F401 000B
+               				
+               				LOAD CHARACTERS, 0036   ; <- "6"
+0036 AE01 0036
+               				STORE CHARACTERS, 000C
+0038 F401 000C
+               				
+               				LOAD CHARACTERS, 0030   ; <- "0"
+003A AE01 0030
+               				STORE CHARACTERS, 000D
+003C F401 000D
+               				
+               				LOAD CHARACTERS, 0020   ; <- " "
+003E AE01 0020
+               				STORE CHARACTERS, 000E
+0040 F401 000E
+               				
+               				LOAD CHARACTERS, 0030   ; <- "0"
+0042 AE01 0030
+               				STORE CHARACTERS, 000F
+0044 F401 000F
+               				
+               				LOAD CHARACTERS, 0030   ; <- "0"
+0046 AE01 0030
+               				STORE CHARACTERS, 0010
+0048 F401 0010
+               				
+               				LOAD CHARACTERS, 0030   ; <- "0"
+004A AE01 0030
+               				STORE CHARACTERS, 0011
+004C F401 0011
+               				
+               				LOAD CHARACTERS, 0030   ; <- "0"
+004E AE01 0030
+               				STORE CHARACTERS, 0012
+0050 F401 0012
+               				
+               				LOAD CHARACTERS, 0030   ; <- "0"
+0052 AE01 0030
+               				STORE CHARACTERS, 0013
+0054 F401 0013
+               				
+               				LOAD CHARACTERS, 000D   ; <- "<CR>"
+0056 AE01 000D
+               				STORE CHARACTERS, 0014
+0058 F401 0014
+               				
+               				LOAD CHARACTERS, 000A   ; <- "<LF>"
+005A AE01 000A
+               				STORE CHARACTERS, 0015
+005C F401 0015
+               									
+               				ENINT
+005E 1E00               
+               MAIN
+               				COMP NEW_LINE, 0000		; CHECK IF IT IS NEWLINE
+005F 9800 0000
+               				CALLZ COUNT
+0061 9400 0100
+               				
+               				COMP COUNTER, C_D
+1A43
+               				CALLZ LED
+0064 9400 0105
+               				
+               				JUMP MAIN
+0066 A400 005f
+               				
+               				
+               			; ADRESS FOR BIN TO ASCII
+               			ADDRESS 0100
+               			
+               				
+               COUNT			
+               				CALL BIN_TO_ASCII
+0100 8E00 010b
+               				LOAD NEW_LINE, 0001
+0102 AE00 0001
+               				RETURN
+0104 3A00               				
+               LED
+               				OUTPUT LED_OUTPUT, 8001
+0105 B805 8001
+               				RL LED_OUTPUT				; ROTATE LEFT
+0107 4805
+               				ADD C_D, 0001
+0108 8204 0001
+               				RETURN
+010A 3A00               				
+               BIN_TO_ASCII
+               				LOAD	RE, COUNTER ; R2 KEEPS COUNT
+303E
+               				LOAD	RD, 2710	; 10_000
+010C AE0D 2710
+               				
+               				CALL	FIND_IT		; HOW MANY? RETURNS 0...9
+010E 8E00 0200
+               				ADD		RB, 0030	; ADD FOR ASCII
+0110 820B 0030
+               				STORE	RB, 000F	; ADD 0030 FOR ASCII
+0112 F40B 000F
+               				LOAD	RD, 03E8	; 1_000
+0114 AE0D 03E8
+               				
+               				CALL	FIND_IT		; HOW MANY?
+0116 8E00 0200
+               				ADD		RB, 0030	; MAKE ASCII
+0118 820B 0030
+               				STORE 	RB, 0010	; STORE
+011A F40B 0010
+               				LOAD	RD, 0064	; 100
+011C AE0D 0064
+               				
+               				CALL	FIND_IT		; HOW MANY?
+011E 8E00 0200
+               				ADD		RB, 0030	; ASCII
+0120 820B 0030
+               				STORE	RB,	0011	
+0122 F40B 0011
+               				LOAD	RD, 000A	; 10
+0124 AE0D 000A
+               				
+               				CALL	FIND_IT		; HOW MANY?
+0126 8E00 0200
+               				ADD		RB, 0030	; ASCII
+0128 820B 0030
+               				STORE	RB, 0011	; 1S LEFT
+012A F40B 0011
+               				ADD		RE, 0030	
+012C 820E 0030
+               				STORE	RE, 0002
+012E F40E 0002
+               				
+               				RETURN
+0130 3A00               				
+               				
+               			; ADDRESS FOR ISR
+               			ADDRESS 0200
+               				
+               FIND_IT			LOAD 	RB, 0000	; COUNT = 0
+0200 AE0B 0000
+               	
+               CN
+               				SUB  	RE, RD		; SUBTRACT RD FROM RE
+5EDE
+               				JUMPC	CY			; RESULT IS SAME
+0203 A600 0209
+               				ADD		RB, 0001	; ADD ONE 
+0205 820B 0001
+               				JUMPC 	CN			; GO BACK TO SUBTRACTION
+0207 A600 0202
+               CY
+               				ADD  	RE, RD		; RESTORE LAST VALUE
+04DE
+               				RETURN
+020A 3A00               	
+               	
+               			; ISR ADDRESS
+               			ADDRESS 0300
+               				
+               ISR
+               				FETCH CHARACTERS, TEMP_CHAR
+7221
+               				OUTPUT CHARACTERS, 8000
+0301 B801 8000
+               				COMP TEMP_CHAR, 0015
+0303 9802 0015
+               				JUMPNZ LINE_FEED 		; JUMP TO LINE FEED IF LF IS NOT REACHED
+0305 AC00 030e
+               				LOAD TEMP_CHAR, 0000	; R2 <- 0000
+0307 AE02 0000
+               				ADD COUNTER, 0001 		; R3 <- R3 + 1
+0309 8203 0001
+               				LOAD NEW_LINE, 0000 	; R0 <- 0000
+030B AE00 0000
+               				RETEN
+030D 4600               				
+               LINE_FEED		
+               				ADD TEMP_CHAR, 0001		; ADD TEMP_CHAR TO GO THROUGH THE CHARACTERS
+030E 8202 0001
+               				RETEN
+0310 4600               
+               ; ISR VECTORED THORUGH 0FFE	
+               ENDIT	
+               				ADDRESS 0FFE
+               				JUMP ISR
+0FFE A400 0300
+               				END
